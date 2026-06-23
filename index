@@ -1,567 +1,3 @@
-
-
-hubspot-email-dashboard-emails-2026-06-10.xls
-xls
-
-could you put this into a graph or chart or something to show the open rate of all. and also out fo all the clients what total percentage opens the emails and other interesting things
-
-Jun 10
-
-Ran 4 commands, viewed a file
-Ran 4 commands, viewed a file
-Now I have all the data I need. Let me build a comprehensive dashboard.
-
-
-
-Here's a breakdown of the most interesting findings across all 144 emails:
-
-Overall engagement: 41.4% open rate and 5.9% click rate — both are quite strong. Industry benchmarks for B2B emails typically sit around 20–25% open rates, so your MAF emails are performing well above average. That likely reflects that these are going to people who genuinely use and expect the reports.
-
-Who opens the most: Smaller, targeted lists dominate the top. Zillow (97.6%), National Mortgage Insurance (97.4%), and Freehold Capital (95.5%) are essentially opening every single email. These are likely single-person or very small contacts per client. The "of all clients, what percentage opens" answer: about 67% of clients have an open rate above 50%, meaning the majority of your recipients are genuinely reading these.
-
-Interesting engagement split: The scatter plot shows that high open rate doesn't always mean high click rate. Taylor Morrison (38% open, 12.6% click), Weekley Group (63.5% open, 9.5%), and NVR Baltimore/DC (28.8% open but 11.7% click) are your most engaged in terms of actually clicking through.
-
-The Beazer outlier: 109 out of 140 emails bounced before even reaching inboxes — this is a list quality/deliverability problem, not a disengaged client. Worth cleaning their contact list.
-
-Banks and financial firms: MUFG Bank (15.2%), California Bank & Trust (12.5%), and Bank of America (5%) are consistently low openers compared to homebuilders. Makes sense given the report content is housing-market focused.
-
-whats the best way to host this
-
-Jun 10
-For something like this — an interactive analytics dashboard you want to share — a few solid options depending on what you need:
-
-Easiest (no code, just share a link)
-
-Notion — paste the data in, embed a chart tool like Datawrapper or Chart.js via iframe. Good if you already use Notion internally.
-Google Looker Studio (free) — connect your HubSpot export directly, drag-and-drop charts, shareable link. Best option if you want to refresh the data regularly.
-Quick static hosting (if you want this exact dashboard)
-
-GitHub Pages (free) — save the HTML as a file, push to a repo, get a public URL in minutes. Zero maintenance.
-Netlify / Vercel (free tier) — drag and drop an HTML file, get a live URL instantly. Slightly more polished than GitHub Pages for sharing externally.
-If you want it auto-updating from HubSpot
-
-HubSpot's own reporting dashboard — it already has this data; you can build a custom report there and share a dashboard link without exporting at all.
-Looker Studio + HubSpot connector — there's a native connector that pulls live data. Best long-term solution if you're doing this monthly.
-For internal JBREC sharing specifically, Looker Studio is probably the sweet spot — free, no IT involvement, shareable with anyone who has a Google account, and you can just re-upload the CSV each month to refresh it. If you want me to export this dashboard as a standalone HTML file you could drop into Netlify or GitHub Pages right now, I can do that in about 30 seconds.
-
-okay I just made a github account
-
-Jun 10
-Nice! Here's the quickest way to get your dashboard live:
-
-1. Export the dashboard as a file
-Just say the word and I'll generate a standalone HTML file with all the charts baked in — no dependencies to worry about.
-
-2. Create a new repository on GitHub
-
-Go to github.com → click the + in the top right → "New repository"
-Name it something like email-dashboard
-Check "Add a README file"
-Click "Create repository"
-3. Upload the HTML file
-
-Inside your new repo, click "Add file" → "Upload files"
-Drop the HTML file in
-Rename it exactly index.html (this is important — GitHub Pages looks for this name)
-Click "Commit changes"
-4. Turn on GitHub Pages
-
-Go to Settings → Pages (left sidebar)
-Under "Source", select "Deploy from a branch"
-Branch: main, folder: / (root)
-Click Save
-Your dashboard will be live at https://yourusername.github.io/email-dashboard within about a minute.
-
-Want me to generate the standalone HTML file now so you're ready for step 2?
-
-okay Export the dashboard as a file
-
-Jun 10
-
-Ran a command, created a file, read a file
-Ran a command, created a file, read a file
-There's your file — download it, then follow steps 2–4 from before. The key things to remember when uploading to GitHub:
-
-Make sure it's named exactly index.html
-After enabling Pages in Settings, it takes about 60 seconds to go live
-Once it's up, send me the URL and I can take a look!
-
-
-Index
-Code · HTML 
-1781115789965_image.png
-Jun 10
-Your repo is set to private, which blocks GitHub Pages on the free plan. Two easy fixes:
-
-Option A — Make the repo public (easiest)
-
-Go to Settings → General → scroll all the way down to the "Danger Zone"
-Click "Change visibility" → "Make public"
-Then come back to Pages and it'll work
-Since this is internal analytics data, you may not want it publicly accessible though — in which case:
-
-Option B — Use Netlify instead (free, stays private-ish)
-
-Go to netlify.com and sign up (can use your GitHub login)
-Click "Add new site" → "Deploy manually"
-Drag and drop your index.html file right onto the page
-You get a URL like https://random-name-123.netlify.app in about 10 seconds
-The Netlify URL isn't password protected, but it's not indexed by Google and nobody would stumble across it — so it's reasonably private for internal sharing. If you need actual password protection, Netlify also has that on their free tier.
-
-Which route works better for you?
-
-1781115924551_image.png
-Jun 10
-You're in the right place and it looks like you made the repo public — Pages is now available! I can see your GitHub username is jbrecllc.
-
-Click Configure under Static HTML (the right-hand option) — that's the right one for your index.html file.
-
-It'll show you a YAML file. Just scroll down and click the green Commit changes button without editing anything. That sets up the deployment workflow.
-
-Then give it about 60 seconds and your dashboard will be live at:
-
-https://jbrecllc.github.io/email-dashboard
-
-(or whatever you named your repo — check the URL shown under the Custom domain section, it says jbrecllc.github.io)
-
-1781116007635_image.png
-Jun 10
-This looks great — I can see index.html is already in your repo and the static.yml workflow was just created. It's deploying right now!
-
-Click Actions in the top menu bar to watch the deployment run. You should see a workflow running with an orange spinner — once it turns to a green checkmark, your site is live.
-
-Your URL will be:
-
-https://jbrecllc.github.io/email-dashboard
-
-Try it in about 60 seconds!
-
-I actually need to change the name of this
-
-Jun 10
-What would you like to rename it to? Just the repo name (which changes the URL), or also the title shown on the dashboard itself, or both?
-
-Just the title
-
-Jun 10
-What should the new title be?
-
-MAF emails May 2026
-
-Jun 10
-
-Edited 2 files, ran a command, read a file
-Edited 2 files, ran a command, read a file
-Done! Download that, then in GitHub go to your repo → click on index.html → click the pencil edit icon → delete everything and paste in the new file contents → commit. The site will redeploy automatically within a minute.
-
-
-Index
-Code · HTML 
-what do I do
-
-Jun 10
-In GitHub, go back to your repo's main page (click email-dashboard at the top). You should see index.html in the file list. Here's what to do:
-
-Click on index.html
-Click the pencil icon (edit) in the top right of the file view
-Select all the text (Ctrl+A) and delete it
-Open the new index.html I just gave you, select all (Ctrl+A), copy it (Ctrl+C), and paste it into GitHub
-Click the green Commit changes button
-Click Commit changes again in the popup
-That's it — the site will update automatically in about a minute.
-
-1781116807678_image.png
-Jun 10
-You've opened the wrong file — you're editing README.md. Click Cancel changes in the top right, then click on index.html in the left sidebar instead.
-
-Okay. This is great, but I'm wondering if, like... I wanna be able to track this stuff month to month. So is there a way for me to add the data here somehow, like, next month?
-
-Jun 10
-Yes, totally doable! There are a few ways depending on how much effort you want to put in:
-
-Easiest — just re-run this process each month
-Export the new HubSpot CSV, upload it here to Claude, and I'll generate a fresh index.html with the new data. You replace the file on GitHub and it's done. Takes maybe 5 minutes once you have the export.
-
-More interesting — add a month selector to the dashboard
-I can build the dashboard so it has a dropdown (May 2026, June 2026, etc.) and shows the data for whichever month you pick. Each month you'd just give me the new export and I'd add that month's data to the file.
-
-Most powerful — connect it directly to HubSpot
-HubSpot has an API so the dashboard could pull live data automatically without any exports. This is more setup work but means the dashboard always stays current with zero effort on your end.
-
-For where you are right now, I'd suggest the middle option — it's not much extra work and you'd end up with a nice historical view showing trends over time, like whether open rates are going up or down month to month. That could be pretty useful for spotting which clients are becoming more or less engaged.
-
-Want me to rebuild it with the month selector now, so it's ready to go for June?
-
-how muich set up to connect it to hubspor directly?
-
-Jun 10
-Honestly, not that much — maybe 30 minutes of setup, and then zero work every month after that. Here's what it involves:
-
-One-time setup:
-
-In HubSpot, go to Settings → Integrations → Private Apps and create a free API key (takes 2 minutes)
-I build you a new version of the dashboard that fetches the data directly from HubSpot instead of using a hardcoded file
-You add the API key to GitHub as a secret (so it's not visible publicly)
-Done — the dashboard auto-refreshes whenever someone opens it
-What you'd get:
-
-Always up to date, no exports needed
-Could add a date range picker so you can view any time period
-Could automatically show month-over-month comparisons
-The one catch:
-Since your repo is public, you'd need to be a little careful about how the API key is handled. There's a clean way to do it, but it adds a tiny bit of complexity.
-
-The main question is whether you're comfortable creating a HubSpot private app — it's pretty straightforward but does require HubSpot admin access. Do you have that?
-
-no i dont have that so lets do option 2
-
-Jun 10
-Perfect, that's probably the better choice anyway — simpler and no API key concerns.
-
-Just export next month's HubSpot data the same way you did this one, upload it here, and I'll add June to the dashboard with a month toggle. Over time you'll build up a nice trend view.
-
-For now, do you want me to rebuild the current dashboard with the month selector already in place (just showing May for now), so it's ready to drop June data into next month? That way the structure is already there.
-
-lets satart with january 2026. I can get the data
-
-Jun 10
-Perfect, go ahead and export the January 2026 HubSpot data the same way you did this one and upload it here. Once I have both I'll build the dashboard with the month toggle showing January and May side by side.
-
-
-hubspot-email-dashboard-emails-2026-06-10-2.csv
-csv
-
-January (there was a tech issue this month that effected 13 clients that we had to resend to so data is weird here) I didnt add the resends in this info
-
-Jun 10
-Got it, good to know about the resends — I'll keep that in mind if anything looks off. Let me dig into the January data.
-
-
-Analyze January data
-Analyze January data
-January only has 13 clients — that tracks with the tech issue you mentioned. The overall open rate (43.8%) is actually very similar to May (41.4%), which is a good sign.
-
-One thing worth flagging: MainVue had 0 opens out of 5 sent in January — that might be one of the 13 affected clients.
-
-Let me build the dashboard now with the month toggle.
-
-
-Get May data formatted for the combined dashboard
-Get May data formatted for the combined dashboard
-Claude's response was interrupted.
-
-hubspot-email-dashboard-emails-2026-06-10-Jun-10-2026-06-50-14-3454-PM.csv
-csv
-
-heres the rest of the january ones (some will be repeats)
-
-Jun 10
-
-Ran 2 commands
-Ran 2 commands
-Good data — January is much more complete with 110 clients. A couple of interesting things already: Meritage Homes was a top performer in January (91.8% open rate) but doesn't show up in the May top 30, and the overall click rate was actually higher in January (7.65%) vs May (5.86%). Now let me build the full dashboard.
-
-
-Ran a command, read a file
-Ran a command, read a file
-Here's the updated file! A few things to note about what's in it:
-
-Month toggle at the top switches between January and May, with all charts and metrics updating instantly
-Delta indicators under each metric card show the change vs. the other month (e.g. click rate was +1.8pp higher in January)
-The January note about the tech issue shows automatically when you switch to that month
-Each month's specific alerts (Beazer bounce issue in May, Mungo zero opens in January) appear only for the relevant month
-Some interesting findings across the two months: Meritage Homes went from 91.8% open rate in January all the way down to ~21% in May — that's a big drop worth keeping an eye on. And the overall click rate dipped from 7.7% to 5.9% between the two months.
-
-Same process as before to update GitHub — open index.html in your repo, select all, paste the new content, commit.
-
-
-Index
-Code · HTML 
-how do I add this one in?
-
-Jun 10
-Same process as before:
-
-Go to your GitHub repo and click on index.html
-Click the pencil icon to edit
-Select all (Ctrl+A), delete, paste in the new file I just gave you
-Click Commit changes → Commit changes again
-That's it — the site will update in about a minute with the month toggle added.
-
-but I want to add it not delete the may stuff
-
-Jun 10
-The new file already has both months in it — January and May. You're not losing anything. When you paste it in, you'll see the toggle buttons at the top letting you switch between the two.
-
-So go ahead and replace the whole file — May is still in there!
-
-okay, can I give you february, march and april first then
-
-Jun 10
-Yes, go ahead and upload them all! You can drop them all at once or one at a time, whatever's easier. I'll process them all together and build one file with all 5 months.
-
-
-Feb.csv
-csv
-
-
-march.csv
-csv
-
-
-april.csv
-csv
-
-Jun 10
-
-Analyze all three months
-Analyze all three months
-Got all three. A few things jumping out already — Weekley Group had a 97% open rate in both February and March, and Beazer Homes had 0 opens in March (still that deliverability issue). Now building the full 5-month dashboard.
-
-
-Ran a command, read a file
-Ran a command, read a file
-All 5 months are in there! Here's what's new in this version:
-
-Trend line chart at the top showing open rate and click rate across all 5 months — you can actually click a point on the trend line to jump to that month
-Month-over-month deltas under each metric card (▲/▼ vs previous month)
-Persistent alerts per month — notably the Beazer deliverability issue is now flagged across all 4 months it appears, and the Weekley Group anomalous click rates in Feb and March are called out too
-One thing worth noting: Beazer Homes has had near-zero performance every single month from February through May — that's almost certainly a list/domain issue that's worth raising with whoever manages their contacts.
-
-Same process to update GitHub — open index.html, select all, paste, commit!
-
-
-Index
-Code · HTML 
-okay im actually wondering, could we view more of the data that is in the excel spreadsheets? I feel like there is more that not showinf
-
-Jun 10
-Absolutely! Let me look at all the columns available across the files.
-
-
-See all available columns
-See all available columns
-There's a lot more in there! Here's what's available that we're not currently showing:
-
-Subject line — could be interesting to see what subject lines correlate with higher open rates
-Bounce breakdown — hard bounces vs soft bounces (Beazer is likely all hard bounces)
-Unsubscribes & spam reports — who's unsubscribing or marking as spam
-Delivery rate & not sent — emails that never even went out
-Reply rate — who's actually replying to emails
-Hard bounce rate vs soft bounce rate — useful for diagnosing list health
-Send date — could show if day/time of send affects open rates
-Subject line classification — HubSpot has already tagged these (News/Announcement, Educational, etc.)
-Communication type — Educational vs other types
-What would be most useful to you? A few directions we could go:
-
-um I guess not really. nevermind!
-
-Jun 10
-No worries! The dashboard is looking good as is. Just upload next month's export when you're ready and I'll drop June in! 😊
-
-This batch currently doesn't filter out bots so when we do start doing that I may upload all the new stuff
-
-Jun 10
-Good to know! When that happens just upload the cleaned files and I can rebuild the whole dashboard with the filtered data — it'll probably make the open and click rates look quite different, especially the click rates which are most affected by bot filtering.
-
-What if I told you or gave you a list of how many clients were on each of those emails, question mark? Or, like, do you already have that in that data somewhere? Because it would be nice to see... essentially, that first person weekly company, they only have one person on their distribution list, so they get, like, a ninety seven percent open rate because I'm the other person. on their list. So I'm wondering if we could somehow show that.
-
-Jun 10
-That's a really important point — a client with 2 people on their list hitting 97% isn't really comparable to a client with 150 people hitting 60%. The "Sent" column in the data is essentially the list size, so we actually already have that!
-
-So for example Weekley Group had 136 sent in January and 93 opens — that's a genuinely strong 68% from a real-sized list. Whereas some of those 100% open rate clients only had 5–10 people on the list.
-
-A few ways we could show this:
-
-Option 1 — Bubble chart where the size of each bubble represents list size, so small lists visually look smaller and don't dominate the chart
-
-Option 2 — Add list size as a column in the top 30 bar chart so you can see "97% open — but only 8 people"
-
-Option 3 — Minimum list size filter — a slider or toggle that lets you filter out clients with fewer than X sends (e.g. hide anyone under 20 sent)
-
-Option 4 — Weighted ranking — score clients by a combo of open rate AND list size, so a 60% open rate from 150 people ranks higher than 100% from 5 people
-
-Any of those sound useful, or a combo? Option 3 might be the most practical since you could just slide it to filter out the noise.
-
-lets go with optoin 3
-
-Jun 10
-
-Ran 4 commands
-Ran 4 commands
-Now I have all the raw per-client data. Let me rebuild the dashboard with a live slider filter.
-
-
-Ran 3 commands, read a file
-Ran 3 commands, read a file
-Here's the updated file! Here's what the slider does:
-
-Default (1+) shows all clients including tiny lists
-Drag it up to ~20–30 and the small lists with artificially high open rates drop off — the top 30 chart labels now also show the list size in parentheses so you can see at a glance, e.g. "Zillow (42)" vs "Hearthstone (12)"
-All the metrics update live — the overall open rate, client count, and trend line all recalculate as you move the slider
-The scatter tooltip now also shows how many were sent, so you can hover over any dot and immediately see the context
-Same process to update GitHub — open index.html, select all, paste, commit!
-
-
-Index
-Code · HTML 
-okay can we create a new dashboard for all other Research emails? We can start with May 2026
-
-Jun 10
-Go ahead and upload the May export for the Research emails and I'll get started on it!
-
-
-hubspot-email-dashboard-emails-2026-06-10-Jun-10-2026-09-01-29-8819-PM.csv
-csv
-
-Jun 10
-
-Peek at the research emails file
-Peek at the research emails file
-This is a very different structure from the MAF emails — instead of one email per client, these are broad research emails sent to thousands of subscribers each. So the dashboard should focus on email-by-email performance rather than client breakdown. Let me analyze the numbers and build it.
-
-
-Full analysis of research emails
-Full analysis of research emails
-Good data — 15 research emails, 112k total sends. Now let me build the dashboard.
-
-
-Ran a command, read a file
-Ran a command, read a file
-Here's the Research dashboard! A few things worth noting from May's data:
-
-NHTI Insights is the top performer at 46.2% open rate — well above the 35.2% average, and it has the smallest list (1,331) so it's genuinely a more targeted audience
-BP Dealer Survey has the highest click rate at 3.9% and a 11.2% CTOR — meaning when people open it they really engage
-BP Quarterly is the lowest open rate at 31.8%, the only one below 32%
-Hard bounces are very low across the board — no deliverability issues like Beazer on the MAF side
-To host this one, you'll want to upload this file to your GitHub repo as research-dashboard.html (not index.html — you already have that one). It'll be accessible at jbrecllc.github.io/email-dashboard/research-dashboard. Upload it the same way — Add file → Upload files in your repo. When you're ready to add more months just send them over!
-
-
-Research dashboard
-Code · HTML 
-1781125584503_image.png
-Is this right?
-
-Jun 10
-Almost! A couple of small things:
-
-Toggle on "Add a README" — you need at least one file in the repo before you can upload, and this is the easiest way to do that
-The repo name has a space — GitHub is converting it to Research-Emails which is fine, that'll work
-Everything else looks good — Public is correct. Go ahead and click Create repository!
-
-okay now what
-
-Jun 10
-Same steps as before:
-
-Click Add file → Upload files
-Drop in the research-dashboard.html file I gave you
-Make sure it's named index.html — rename it before uploading, or GitHub lets you rename after
-Click Commit changes
-Then go to Settings → Pages → click Configure under Static HTML → Commit changes
-
-Your URL will be:
-https://jreyesscafani.github.io/Research-Emails
-
-Give it about 60 seconds after that last step and it'll be live!
-
-the html has to be renamed to Index?
-
-Jun 10
-Yes — GitHub Pages looks specifically for a file called index.html as the homepage. If it's named anything else it won't know what to display at the URL.
-
-So before you upload, just rename the file on your computer from research-dashboard.html to index.html, then upload it!
-
-1781125693920_image.png
-I didnt rename it first on accident
-
-Jun 10
-No worries! You can rename it right here in GitHub. At the top where it says research-dashboard.html, just click on that filename and change it to index.html, then click Commit changes.
-
-okay now what
-
-Jun 10
-Now go to Settings → Pages in the left sidebar → click Configure under Static HTML → then just click Commit changes on the YAML file it shows you without editing anything.
-
-Wait about 60 seconds and your dashboard will be live at:
-
-https://jreyesscafani.github.io/Research-Emails
-
-1781125777292_image.png
-Jun 10
-This one is showing "Deploy from a branch" instead of the GitHub Actions option. Click the None dropdown under Branch, select main, then click Save. That should enable it!
-
-how do I get the link
-
-Jun 10
-Once you click Save it should refresh and show you the URL right there on that same page near the top. It'll say something like "Your site is live at..." with the link.
-
-If it doesn't appear immediately wait about 60 seconds and refresh the page — it takes a moment to build.
-
-1781125900320_image.png
-Jun 10
-It still shows None — you need to click the None dropdown and change it to main first, then click Save. It won't activate until you actually select a branch!
-
-1781125954973_image.png
-Jun 10
-It's building! Give it about 60 seconds then go to:
-
-https://jreyesscafani.github.io/Research-Emails
-
-can we ad % of recipients who download the report),
-
-Jun 10
-That's not in the HubSpot export data unfortunately — downloads would only be tracked if HubSpot is monitoring clicks on a specific download link, and even then it would show as a click rather than a confirmed download.
-
-What we do have that's close to that is the click-to-open rate (CTOR) which is already in the dashboard — that shows what percentage of people who opened the email actually clicked through, which is probably the closest proxy for "engaged enough to want the report."
-
-If you wanted true download tracking you'd need something on the report hosting side (like Google Analytics on the page where the PDF lives) to count actual downloads. Does JBREC host the reports somewhere like a website or portal?
-
-hubspot-email-2026-06-10-127812-1781126341385.pdf
-pdf
-
-what if I uploaded all 15 of these?
-
-Jun 10
-This is really useful — the PDF has a ton of extra data we can use:
-
-Bot-excluded open rate (22.46% vs 46.21% with bots) — this is exactly what you were asking about earlier!
-PDF download clicks (42 out of 45 clicks were the report download link)
-Time spent reading — Read 61.2% / Skimmed 19.9% / Glanced 18.9%
-Device breakdown — Desktop 86% / Mobile 9%
-Top clicked links broken down individually
-If you upload all 15 PDFs I can pull all of that data out and build a much richer dashboard including the bot-excluded rates and the report download click counts. That would essentially give you a real "download rate" — since 42 out of 45 clicks on NHTI were the PDF link, clicks are basically downloads for these emails.
-
-Go ahead and upload them all at once!
-
-Homebuilder Survey First Glance (May 2026).pdf
-pdf
-
-Homebuilder Survey First Glance (May 2026) (1).pdf
-pdf
-
-how many should I add at a time?
-
-Jun 10
-These two PDFs appear to be duplicates of each other — same content. Also I notice these don't have the detailed stats page like the NHTI PDF did (with open rates, click breakdown, time spent reading, etc.).
-
-The NHTI PDF had a full analytics section because it was exported as a detailed report from HubSpot. These two just have the email content itself.
-
-So two things to check:
-
-Are these the right exports? In HubSpot, when you go to an email and click on it, there should be a "Performance" tab that shows all the stats — that's what you need to export as PDF, not the email content itself.
-You can upload all 15 at once — Claude can handle that. But they need to be the stats/performance PDFs like the NHTI one, not the email content PDFs.
-Can you go back into HubSpot and find where you exported the NHTI PDF from? That's the format we need for all 15.
-
-
-
-here are the correct ones.
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -609,18 +45,19 @@ Index · HTML
 </style>
 </head>
 <body>
- 
+
 <h1>MAF Email Analytics</h1>
 <p class="subtitle">Monthly performance by client — John Burns Research and Consulting</p>
- 
+
 <div class="month-tabs">
   <button class="tab" onclick="switchMonth('jan')" id="tab-jan">January</button>
   <button class="tab" onclick="switchMonth('feb')" id="tab-feb">February</button>
   <button class="tab" onclick="switchMonth('mar')" id="tab-mar">March</button>
   <button class="tab" onclick="switchMonth('apr')" id="tab-apr">April</button>
-  <button class="tab active" onclick="switchMonth('may')" id="tab-may">May</button>
+  <button class="tab" onclick="switchMonth('may')" id="tab-may">May</button>
+  <button class="tab active" onclick="switchMonth('jun')" id="tab-jun">June</button>
 </div>
- 
+
 <div class="filter-bar">
   <div>
     <div class="filter-label">Minimum list size</div>
@@ -632,16 +69,16 @@ Index · HTML
     <div class="filter-count" id="sliderCount"></div>
   </div>
 </div>
- 
+
 <div id="note-jan" class="alert alert-teal" style="display:none">ℹ️ January had a tech issue affecting 13 clients who required resends. Data reflects original sends only.</div>
- 
+
 <div class="metric-grid">
   <div class="metric-card"><div class="metric-label">Total sent (filtered)</div><div class="metric-value" id="m-sent"></div><div class="metric-delta" id="d-sent"></div></div>
   <div class="metric-card"><div class="metric-label">Open rate (filtered)</div><div class="metric-value" id="m-open"></div><div class="metric-delta" id="d-open"></div></div>
   <div class="metric-card"><div class="metric-label">Click rate (filtered)</div><div class="metric-value" id="m-click"></div><div class="metric-delta" id="d-click"></div></div>
   <div class="metric-card"><div class="metric-label">Clients shown</div><div class="metric-value" id="m-clients"></div><div class="metric-delta" id="d-clients"></div></div>
 </div>
- 
+
 <p class="section-label">Open rate distribution</p>
 <div class="bucket-row">
   <div class="bucket"><span class="bucket-dot" style="background:#1D9E75"></span><span id="b-vh"></span></div>
@@ -650,21 +87,21 @@ Index · HTML
   <div class="bucket"><span class="bucket-dot" style="background:#EF9F27"></span><span id="b-low"></span></div>
   <div class="bucket"><span class="bucket-dot" style="background:#E24B4A"></span><span id="b-vl"></span></div>
 </div>
- 
+
 <div class="chart-card">
   <p class="section-label">Month-over-month trends <span style="font-weight:400;font-size:12px;">(click a point to switch month)</span></p>
   <div style="position:relative;width:100%;height:240px;">
     <canvas id="trendChart"></canvas>
   </div>
 </div>
- 
+
 <div class="chart-card">
   <p class="section-label">Open rate by client — top 30 <span style="font-weight:400;font-size:12px;">(filtered by list size)</span></p>
   <div style="position:relative;width:100%;height:560px;">
     <canvas id="topChart"></canvas>
   </div>
 </div>
- 
+
 <div class="two-col">
   <div class="chart-card">
     <p class="section-label">Open rate vs. click rate <span style="font-weight:400;font-size:12px;">(filtered)</span></p>
@@ -679,28 +116,30 @@ Index · HTML
     </div>
   </div>
 </div>
- 
+
 <div id="alert-box"></div>
 <p style="font-size:12px;color:#888780;text-align:center;margin-top:2rem;">JBREC · Data from HubSpot · jbrecllc.github.io/email-dashboard</p>
- 
+
 <script>
-const rawData = {"jan":[{"client":"National Mortgage Insurance","sent":39,"opened":37,"openRate":94.9,"clickRate":10.3},{"client":"Meritage Homes","sent":147,"opened":135,"openRate":91.8,"clickRate":17.0},{"client":"Intracorp - OC/LA","sent":15,"opened":13,"openRate":86.7,"clickRate":6.7},{"client":"Intracorp - Seattle","sent":31,"opened":25,"openRate":80.6,"clickRate":12.9},{"client":"ResiBuilt Homes","sent":19,"opened":15,"openRate":78.9,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":30,"opened":23,"openRate":76.7,"clickRate":13.3},{"client":"HomeFed","sent":16,"opened":12,"openRate":75.0,"clickRate":6.2},{"client":"Rancho Mission Viejo","sent":15,"opened":11,"openRate":73.3,"clickRate":6.7},{"client":"Hearthstone","sent":11,"opened":8,"openRate":72.7,"clickRate":0.0},{"client":"Weekley Group of Companies","sent":136,"opened":93,"openRate":68.4,"clickRate":11.8},{"client":"South Texas Brick & Stone","sent":9,"opened":6,"openRate":66.7,"clickRate":11.1},{"client":"Hillwood Communities","sent":32,"opened":21,"openRate":65.6,"clickRate":6.2},{"client":"Lone Star Funds","sent":63,"opened":41,"openRate":65.1,"clickRate":0.0},{"client":"Century Communities","sent":158,"opened":101,"openRate":63.9,"clickRate":10.1},{"client":"Stock Development","sent":27,"opened":17,"openRate":63.0,"clickRate":0.0},{"client":"GTIS Partners","sent":35,"opened":22,"openRate":62.9,"clickRate":0.0},{"client":"IHP Capital Partners","sent":24,"opened":15,"openRate":62.5,"clickRate":4.2},{"client":"Luxor Capital Group LP","sent":8,"opened":5,"openRate":62.5,"clickRate":0.0},{"client":"Smith Douglas Homes","sent":33,"opened":20,"openRate":60.6,"clickRate":9.1},{"client":"Shea Homes","sent":147,"opened":89,"openRate":60.5,"clickRate":15.0},{"client":"SimplyHome","sent":25,"opened":15,"openRate":60.0,"clickRate":4.0},{"client":"Summit Materials - West","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"KTGY","sent":42,"opened":25,"openRate":59.5,"clickRate":4.8},{"client":"Crown Community Development","sent":27,"opened":16,"openRate":59.3,"clickRate":0.0},{"client":"Trilantic Capital Partners","sent":12,"opened":7,"openRate":58.3,"clickRate":8.3},{"client":"Fundrise","sent":21,"opened":12,"openRate":57.1,"clickRate":0.0},{"client":"Green Brick Partners","sent":29,"opened":16,"openRate":55.2,"clickRate":13.8},{"client":"Hines","sent":24,"opened":13,"openRate":54.2,"clickRate":4.2},{"client":"Tricon Capital Group","sent":55,"opened":29,"openRate":52.7,"clickRate":5.5},{"client":"BPG Acquisitions LLC","sent":181,"opened":95,"openRate":52.5,"clickRate":7.2},{"client":"Westbrook Partners","sent":10,"opened":5,"openRate":50.0,"clickRate":20.0},{"client":"Smith Family Homes","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"KB Home","sent":8,"opened":4,"openRate":50.0,"clickRate":25.0},{"client":"Villa Homes","sent":10,"opened":5,"openRate":50.0,"clickRate":10.0},{"client":"Kodiak Building Partners","sent":46,"opened":22,"openRate":47.8,"clickRate":6.5},{"client":"Empire Communities","sent":30,"opened":14,"openRate":46.7,"clickRate":3.3},{"client":"Freehold Capital Management","sent":28,"opened":13,"openRate":46.4,"clickRate":10.7},{"client":"Integral Communities","sent":112,"opened":52,"openRate":46.4,"clickRate":5.4},{"client":"Zillow","sent":56,"opened":26,"openRate":46.4,"clickRate":7.1},{"client":"Research","sent":1178,"opened":546,"openRate":46.3,"clickRate":7.4},{"client":"The New Home Company","sent":54,"opened":24,"openRate":44.4,"clickRate":13.0},{"client":"Teichert","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"Mattamy Homes","sent":91,"opened":40,"openRate":44.0,"clickRate":13.2},{"client":"Van Metre Companies","sent":16,"opened":7,"openRate":43.8,"clickRate":12.5},{"client":"Trumark Homes","sent":49,"opened":21,"openRate":42.9,"clickRate":8.2},{"client":"Oakpointe","sent":7,"opened":3,"openRate":42.9,"clickRate":14.3},{"client":"Renasant Bank","sent":7,"opened":3,"openRate":42.9,"clickRate":14.3},{"client":"Howard Hughes","sent":26,"opened":11,"openRate":42.3,"clickRate":3.8},{"client":"Kitson&Partners","sent":26,"opened":11,"openRate":42.3,"clickRate":3.8},{"client":"Trez Capital","sent":63,"opened":26,"openRate":41.3,"clickRate":7.9},{"client":"Preston Hollow Capital","sent":22,"opened":9,"openRate":40.9,"clickRate":9.1},{"client":"TRI Pointe Homes","sent":243,"opened":99,"openRate":40.7,"clickRate":7.4},{"client":"Sekisui","sent":65,"opened":26,"openRate":40.0,"clickRate":13.8},{"client":"Pahlisch Homes","sent":10,"opened":4,"openRate":40.0,"clickRate":20.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":9,"openRate":39.1,"clickRate":17.4},{"client":"Replay Destinations","sent":13,"opened":5,"openRate":38.5,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":37,"opened":14,"openRate":37.8,"clickRate":0.0},{"client":"Tim Lewis Communities","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Rockpoint Group, LLC","sent":32,"opened":12,"openRate":37.5,"clickRate":3.1},{"client":"NVR Baltimore/DC","sent":116,"opened":43,"openRate":37.1,"clickRate":19.8},{"client":"Taylor Morrison - All Markets","sent":92,"opened":34,"openRate":37.0,"clickRate":13.0},{"client":"Greystone","sent":19,"opened":7,"openRate":36.8,"clickRate":10.5},{"client":"Invitation Homes","sent":79,"opened":29,"openRate":36.7,"clickRate":5.1},{"client":"Illinois Tool Works","sent":44,"opened":16,"openRate":36.4,"clickRate":2.3},{"client":"PulteGroup","sent":222,"opened":80,"openRate":36.0,"clickRate":10.8},{"client":"K Hovnanian","sent":126,"opened":45,"openRate":35.7,"clickRate":5.6},{"client":"Hayden Homes","sent":31,"opened":11,"openRate":35.5,"clickRate":9.7},{"client":"Perry Homes","sent":52,"opened":18,"openRate":34.6,"clickRate":3.8},{"client":"Lowes","sent":29,"opened":10,"openRate":34.5,"clickRate":0.0},{"client":"Pacific Lifestyle Homes","sent":32,"opened":11,"openRate":34.4,"clickRate":3.1},{"client":"Touchstone Living","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Inland Homebuilding Group","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":15,"opened":5,"openRate":33.3,"clickRate":6.7},{"client":"Greenhawk","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Landsea Holdings Corporation","sent":33,"opened":11,"openRate":33.3,"clickRate":21.2},{"client":"MASCO Corporation","sent":55,"opened":18,"openRate":32.7,"clickRate":7.3},{"client":"Park Square Homes","sent":19,"opened":6,"openRate":31.6,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":4,"openRate":30.8,"clickRate":0.0},{"client":"NVR Florida","sent":56,"opened":17,"openRate":30.4,"clickRate":12.5},{"client":"US LBM Holdings","sent":205,"opened":61,"openRate":29.8,"clickRate":4.4},{"client":"Turner Homes, LLC","sent":27,"opened":8,"openRate":29.6,"clickRate":3.7},{"client":"Homes by WestBay","sent":24,"opened":7,"openRate":29.2,"clickRate":8.3},{"client":"DR Horton","sent":84,"opened":24,"openRate":28.6,"clickRate":8.3},{"client":"Kodiak Interiors Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Sancerra Management","sent":14,"opened":4,"openRate":28.6,"clickRate":7.1},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":10.9},{"client":"Texas Capital Bank","sent":26,"opened":7,"openRate":26.9,"clickRate":0.0},{"client":"Poly Global","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"Walton Global Holdings","sent":87,"opened":21,"openRate":24.1,"clickRate":1.1},{"client":"Van Daele Homes","sent":13,"opened":3,"openRate":23.1,"clickRate":7.7},{"client":"Bank of America Merrill Lynch","sent":18,"opened":4,"openRate":22.2,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":9,"opened":2,"openRate":22.2,"clickRate":0.0},{"client":"M/I Homes","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Varde Partners","sent":15,"opened":3,"openRate":20.0,"clickRate":6.7},{"client":"Summit Materials - Central","sent":10,"opened":2,"openRate":20.0,"clickRate":10.0},{"client":"San Joaquin Valley Homes","sent":10,"opened":2,"openRate":20.0,"clickRate":10.0},{"client":"Spring Garden Capital Group","sent":5,"opened":1,"openRate":20.0,"clickRate":20.0},{"client":"Pacific Communities Builder","sent":15,"opened":3,"openRate":20.0,"clickRate":0.0},{"client":"Third Coast Bank","sent":16,"opened":3,"openRate":18.8,"clickRate":6.2},{"client":"MUFG Bank","sent":28,"opened":5,"openRate":17.9,"clickRate":3.6},{"client":"Wilson Homes","sent":6,"opened":1,"openRate":16.7,"clickRate":0.0},{"client":"MainVue","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":29,"opened":4,"openRate":13.8,"clickRate":0.0},{"client":"Genesis Capital","sent":177,"opened":24,"openRate":13.6,"clickRate":0.6},{"client":"Highland Homes","sent":38,"opened":5,"openRate":13.2,"clickRate":2.6},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":1,"openRate":4.2,"clickRate":0.0},{"client":"Mungo Companies","sent":8,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0}],"feb":[{"client":"Weekley Group of Companies","sent":135,"opened":133,"openRate":98.5,"clickRate":97.8},{"client":"National Mortgage Insurance","sent":41,"opened":39,"openRate":95.1,"clickRate":2.4},{"client":"Meritage Homes","sent":138,"opened":127,"openRate":92.0,"clickRate":14.5},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":13.6},{"client":"Intracorp - OC/LA","sent":14,"opened":12,"openRate":85.7,"clickRate":14.3},{"client":"DMB Development","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"Intracorp - Seattle","sent":10,"opened":8,"openRate":80.0,"clickRate":0.0},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":40.0},{"client":"Intracorp - Austin","sent":14,"opened":11,"openRate":78.6,"clickRate":14.3},{"client":"Chartwell Escrow","sent":13,"opened":10,"openRate":76.9,"clickRate":30.8},{"client":"Gradison Design Build","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Empire Communities","sent":25,"opened":18,"openRate":72.0,"clickRate":12.0},{"client":"Ki-Star Real Estate","sent":7,"opened":5,"openRate":71.4,"clickRate":14.3},{"client":"HomeFed","sent":14,"opened":10,"openRate":71.4,"clickRate":0.0},{"client":"Villa Homes","sent":10,"opened":7,"openRate":70.0,"clickRate":10.0},{"client":"Rancho Mission Viejo","sent":13,"opened":9,"openRate":69.2,"clickRate":0.0},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":15.4},{"client":"Beazer Homes","sent":136,"opened":93,"openRate":68.4,"clickRate":19.1},{"client":"IHP Capital Partners","sent":17,"opened":11,"openRate":64.7,"clickRate":5.9},{"client":"Stock Development","sent":25,"opened":16,"openRate":64.0,"clickRate":0.0},{"client":"Hearthstone","sent":11,"opened":7,"openRate":63.6,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":30,"opened":19,"openRate":63.3,"clickRate":0.0},{"client":"Wan Bridge","sent":32,"opened":20,"openRate":62.5,"clickRate":3.1},{"client":"Caldwell Companies","sent":16,"opened":10,"openRate":62.5,"clickRate":6.2},{"client":"Century Communities","sent":149,"opened":93,"openRate":62.4,"clickRate":7.4},{"client":"Crown Community Development","sent":21,"opened":13,"openRate":61.9,"clickRate":9.5},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":0.0},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Hillwood Communities","sent":27,"opened":16,"openRate":59.3,"clickRate":3.7},{"client":"Crescent Communities","sent":17,"opened":10,"openRate":58.8,"clickRate":5.9},{"client":"Trumark Homes","sent":41,"opened":24,"openRate":58.5,"clickRate":4.9},{"client":"SimplyHome","sent":24,"opened":14,"openRate":58.3,"clickRate":0.0},{"client":"Arixa Capital","sent":26,"opened":15,"openRate":57.7,"clickRate":3.8},{"client":"Johnson Development Corp.","sent":59,"opened":34,"openRate":57.6,"clickRate":1.7},{"client":"Shea Homes","sent":137,"opened":78,"openRate":56.9,"clickRate":8.0},{"client":"Construction Resources","sent":23,"opened":13,"openRate":56.5,"clickRate":4.3},{"client":"South Texas Brick & Stone","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"Lone Star Funds","sent":62,"opened":34,"openRate":54.8,"clickRate":1.6},{"client":"Tricon Capital Group","sent":46,"opened":25,"openRate":54.3,"clickRate":2.2},{"client":"Zillow","sent":48,"opened":26,"openRate":54.2,"clickRate":4.2},{"client":"GTIS Partners","sent":30,"opened":16,"openRate":53.3,"clickRate":0.0},{"client":"Cardel Group of Companies","sent":17,"opened":9,"openRate":52.9,"clickRate":5.9},{"client":"ResiBuilt Homes","sent":17,"opened":9,"openRate":52.9,"clickRate":0.0},{"client":"Smith Douglas Homes","sent":34,"opened":18,"openRate":52.9,"clickRate":14.7},{"client":"MileStone Community Builders","sent":21,"opened":11,"openRate":52.4,"clickRate":0.0},{"client":"Mattamy Homes","sent":86,"opened":45,"openRate":52.3,"clickRate":12.8},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"LGI Homes","sent":26,"opened":13,"openRate":50.0,"clickRate":0.0},{"client":"Hines","sent":24,"opened":12,"openRate":50.0,"clickRate":0.0},{"client":"Mungo Companies","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Touchstone Living","sent":8,"opened":4,"openRate":50.0,"clickRate":12.5},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"Easton Development Company","sent":4,"opened":2,"openRate":50.0,"clickRate":25.0},{"client":"BPG Acquisitions LLC","sent":184,"opened":91,"openRate":49.5,"clickRate":7.6},{"client":"Research","sent":201,"opened":97,"openRate":48.3,"clickRate":7.5},{"client":"KTGY","sent":44,"opened":21,"openRate":47.7,"clickRate":4.5},{"client":"Kitson&Partners","sent":21,"opened":10,"openRate":47.6,"clickRate":4.8},{"client":"Howard Hughes","sent":26,"opened":12,"openRate":46.2,"clickRate":0.0},{"client":"Green Brick Partners","sent":24,"opened":11,"openRate":45.8,"clickRate":0.0},{"client":"TRI Pointe Homes","sent":236,"opened":107,"openRate":45.3,"clickRate":9.3},{"client":"Van Metre Companies","sent":16,"opened":7,"openRate":43.8,"clickRate":6.2},{"client":"MASCO Corporation","sent":53,"opened":23,"openRate":43.4,"clickRate":5.7},{"client":"Kodiak Interiors Group","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"Apollo Global Real Estate Management","sent":84,"opened":36,"openRate":42.9,"clickRate":1.2},{"client":"The New Home Company","sent":56,"opened":24,"openRate":42.9,"clickRate":19.6},{"client":"Trilantic Capital Partners","sent":12,"opened":5,"openRate":41.7,"clickRate":0.0},{"client":"Kodiak Building Partners","sent":34,"opened":14,"openRate":41.2,"clickRate":2.9},{"client":"Rockpoint Group, LLC","sent":32,"opened":13,"openRate":40.6,"clickRate":0.0},{"client":"Board of Advisors","sent":10,"opened":4,"openRate":40.0,"clickRate":0.0},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":20.0},{"client":"Van Daele Homes","sent":10,"opened":4,"openRate":40.0,"clickRate":40.0},{"client":"Summit Materials - West","sent":5,"opened":2,"openRate":40.0,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":30,"opened":12,"openRate":40.0,"clickRate":3.3},{"client":"Illinois Tool Works","sent":43,"opened":17,"openRate":39.5,"clickRate":2.3},{"client":"Landsea Holdings Corporation","sent":28,"opened":11,"openRate":39.3,"clickRate":21.4},{"client":"Pacific Lifestyle Homes","sent":31,"opened":12,"openRate":38.7,"clickRate":0.0},{"client":"Pahlisch Homes","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Trez Capital","sent":55,"opened":21,"openRate":38.2,"clickRate":5.5},{"client":"Capital Fund 1","sent":21,"opened":8,"openRate":38.1,"clickRate":4.8},{"client":"Teichert","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Ashlar Development","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Turner Homes, LLC","sent":27,"opened":10,"openRate":37.0,"clickRate":3.7},{"client":"Park Square Homes","sent":19,"opened":7,"openRate":36.8,"clickRate":0.0},{"client":"Sekisui","sent":64,"opened":23,"openRate":35.9,"clickRate":12.5},{"client":"KB Home","sent":14,"opened":5,"openRate":35.7,"clickRate":21.4},{"client":"Perry Homes","sent":49,"opened":17,"openRate":34.7,"clickRate":10.2},{"client":"PulteGroup","sent":222,"opened":77,"openRate":34.7,"clickRate":6.8},{"client":"Texas Capital Bank","sent":26,"opened":9,"openRate":34.6,"clickRate":3.8},{"client":"Asahi Kasei Homes North America","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Land Sale TX","sent":3,"opened":1,"openRate":33.3,"clickRate":33.3},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":13,"openRate":33.3,"clickRate":2.6},{"client":"NVR Baltimore/DC","sent":111,"opened":37,"openRate":33.3,"clickRate":10.8},{"client":"SiEnergy","sent":18,"opened":6,"openRate":33.3,"clickRate":5.6},{"client":"Argosy Real Estate","sent":24,"opened":8,"openRate":33.3,"clickRate":0.0},{"client":"US LBM Holdings","sent":207,"opened":68,"openRate":32.9,"clickRate":4.8},{"client":"Highland Homes","sent":37,"opened":12,"openRate":32.4,"clickRate":0.0},{"client":"Homes by WestBay","sent":22,"opened":7,"openRate":31.8,"clickRate":4.5},{"client":"Greystone","sent":19,"opened":6,"openRate":31.6,"clickRate":0.0},{"client":"Third Coast Bank","sent":16,"opened":5,"openRate":31.2,"clickRate":6.2},{"client":"Lowes","sent":29,"opened":9,"openRate":31.0,"clickRate":3.4},{"client":"Foremost Pacific Group","sent":13,"opened":4,"openRate":30.8,"clickRate":15.4},{"client":"K Hovnanian","sent":117,"opened":36,"openRate":30.8,"clickRate":7.7},{"client":"RAM Real Estate Capital","sent":10,"opened":3,"openRate":30.0,"clickRate":20.0},{"client":"Hayden Homes","sent":30,"opened":9,"openRate":30.0,"clickRate":3.3},{"client":"Taylor Morrison- Houston","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"Invitation Homes","sent":76,"opened":22,"openRate":28.9,"clickRate":2.6},{"client":"Taylor Morrison-Darling Homes - DFW","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Inland Homebuilding Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Preston Hollow Capital","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"The Signorelli Company","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":22,"opened":6,"openRate":27.3,"clickRate":0.0},{"client":"The Sterling Group","sent":11,"opened":3,"openRate":27.3,"clickRate":0.0},{"client":"Replay Destinations","sent":11,"opened":3,"openRate":27.3,"clickRate":0.0},{"client":"Centric Infrastructure Group","sent":15,"opened":4,"openRate":26.7,"clickRate":6.7},{"client":"SR Homes","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Smith Family Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"BRD Land & Investments","sent":8,"opened":2,"openRate":25.0,"clickRate":12.5},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":11,"openRate":23.9,"clickRate":2.2},{"client":"DR Horton","sent":80,"opened":19,"openRate":23.8,"clickRate":8.8},{"client":"Walton Global Holdings","sent":78,"opened":18,"openRate":23.1,"clickRate":5.1},{"client":"BB Living Residential","sent":18,"opened":4,"openRate":22.2,"clickRate":0.0},{"client":"NVR Florida","sent":54,"opened":12,"openRate":22.2,"clickRate":3.7},{"client":"Taylor Morrison - All Markets","sent":88,"opened":19,"openRate":21.6,"clickRate":3.4},{"client":"Summit Materials - Texas","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Westbrook Partners","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Renasant Bank","sent":5,"opened":1,"openRate":20.0,"clickRate":20.0},{"client":"Summit Materials - Central","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":29,"openRate":17.1,"clickRate":2.4},{"client":"MainVue","sent":6,"opened":1,"openRate":16.7,"clickRate":16.7},{"client":"MUFG Bank","sent":37,"opened":6,"openRate":16.2,"clickRate":2.7},{"client":"California Bank & Trust","sent":32,"opened":5,"openRate":15.6,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":58,"opened":9,"openRate":15.5,"clickRate":3.4},{"client":"Varde Partners","sent":15,"opened":2,"openRate":13.3,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":3,"openRate":12.5,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":2,"openRate":12.5,"clickRate":6.2},{"client":"CMC","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Bank of America Merrill Lynch","sent":18,"opened":2,"openRate":11.1,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":9,"opened":1,"openRate":11.1,"clickRate":0.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":2,"openRate":8.7,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Challenger Homes","sent":5,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Land Tejas Development","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Greenhawk","sent":7,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Wilson Homes","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0}],"mar":[{"client":"Weekley Group of Companies","sent":271,"opened":263,"openRate":97.0,"clickRate":52.0},{"client":"National Mortgage Insurance","sent":39,"opened":37,"openRate":94.9,"clickRate":0.0},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":9.1},{"client":"Intracorp - OC/LA","sent":28,"opened":24,"openRate":85.7,"clickRate":14.3},{"client":"Intracorp - Austin","sent":28,"opened":24,"openRate":85.7,"clickRate":10.7},{"client":"Texas Capital Bank","sent":21,"opened":18,"openRate":85.7,"clickRate":0.0},{"client":"Villa Homes","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":30.0},{"client":"Chartwell Escrow","sent":25,"opened":19,"openRate":76.0,"clickRate":20.0},{"client":"Hearthstone","sent":12,"opened":9,"openRate":75.0,"clickRate":0.0},{"client":"HomeFed","sent":14,"opened":10,"openRate":71.4,"clickRate":7.1},{"client":"ResiBuilt Homes","sent":17,"opened":12,"openRate":70.6,"clickRate":0.0},{"client":"Zillow","sent":89,"opened":61,"openRate":68.5,"clickRate":5.6},{"client":"Fundrise","sent":21,"opened":14,"openRate":66.7,"clickRate":0.0},{"client":"Hillwood Communities","sent":27,"opened":18,"openRate":66.7,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":60,"opened":40,"openRate":66.7,"clickRate":3.3},{"client":"AG WIP Asset Management","sent":26,"opened":17,"openRate":65.4,"clickRate":15.4},{"client":"Johnson Development Corp.","sent":118,"opened":77,"openRate":65.3,"clickRate":5.1},{"client":"Stock Development","sent":25,"opened":16,"openRate":64.0,"clickRate":0.0},{"client":"Gradison Design Build","sent":8,"opened":5,"openRate":62.5,"clickRate":12.5},{"client":"Wan Bridge","sent":63,"opened":38,"openRate":60.3,"clickRate":6.3},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Summit Materials - West","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Empire Communities","sent":25,"opened":15,"openRate":60.0,"clickRate":8.0},{"client":"Cardel Group of Companies","sent":17,"opened":10,"openRate":58.8,"clickRate":5.9},{"client":"IHP Capital Partners","sent":17,"opened":10,"openRate":58.8,"clickRate":0.0},{"client":"DMB Development","sent":12,"opened":7,"openRate":58.3,"clickRate":8.3},{"client":"SimplyHome","sent":24,"opened":14,"openRate":58.3,"clickRate":0.0},{"client":"Construction Resources","sent":23,"opened":13,"openRate":56.5,"clickRate":8.7},{"client":"Hines","sent":32,"opened":18,"openRate":56.2,"clickRate":9.4},{"client":"KTGY","sent":43,"opened":24,"openRate":55.8,"clickRate":4.7},{"client":"South Texas Brick & Stone","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"General Shale Brick Inc.","sent":20,"opened":11,"openRate":55.0,"clickRate":15.0},{"client":"Century Communities","sent":148,"opened":81,"openRate":54.7,"clickRate":6.1},{"client":"Lone Star Funds","sent":57,"opened":31,"openRate":54.4,"clickRate":3.5},{"client":"Shea Homes","sent":135,"opened":73,"openRate":54.1,"clickRate":7.4},{"client":"Rancho Mission Viejo","sent":13,"opened":7,"openRate":53.8,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":7,"openRate":53.8,"clickRate":0.0},{"client":"GTIS Partners","sent":28,"opened":15,"openRate":53.6,"clickRate":3.6},{"client":"Integral Communities","sent":36,"opened":19,"openRate":52.8,"clickRate":13.9},{"client":"BPG Acquisitions LLC","sent":182,"opened":96,"openRate":52.7,"clickRate":11.5},{"client":"Kitson&Partners","sent":21,"opened":11,"openRate":52.4,"clickRate":0.0},{"client":"The New Home Company","sent":56,"opened":29,"openRate":51.8,"clickRate":17.9},{"client":"Trumark Homes","sent":41,"opened":21,"openRate":51.2,"clickRate":7.3},{"client":"Asahi Kasei Homes North America","sent":10,"opened":5,"openRate":50.0,"clickRate":0.0},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":33.3},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"RAM Real Estate Capital","sent":10,"opened":5,"openRate":50.0,"clickRate":10.0},{"client":"Teichert","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Research","sent":57,"opened":28,"openRate":49.1,"clickRate":5.3},{"client":"Kodiak Building Partners","sent":33,"opened":16,"openRate":48.5,"clickRate":6.1},{"client":"Pacific Lifestyle Homes","sent":31,"opened":15,"openRate":48.4,"clickRate":3.2},{"client":"Howard Hughes","sent":27,"opened":13,"openRate":48.1,"clickRate":3.7},{"client":"Crown Community Development","sent":21,"opened":10,"openRate":47.6,"clickRate":4.8},{"client":"Smith Douglas Homes","sent":38,"opened":18,"openRate":47.4,"clickRate":15.8},{"client":"Mattamy Homes","sent":92,"opened":43,"openRate":46.7,"clickRate":18.5},{"client":"Boulder Creek Neighborhoods","sent":13,"opened":6,"openRate":46.2,"clickRate":7.7},{"client":"Board of Advisors","sent":11,"opened":5,"openRate":45.5,"clickRate":0.0},{"client":"Trez Capital","sent":55,"opened":25,"openRate":45.5,"clickRate":5.5},{"client":"TRI Pointe Homes","sent":229,"opened":104,"openRate":45.4,"clickRate":9.6},{"client":"Mungo Companies","sent":9,"opened":4,"openRate":44.4,"clickRate":0.0},{"client":"RESICAP","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"Kodiak Interiors Group","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"LGI Homes","sent":26,"opened":11,"openRate":42.3,"clickRate":7.7},{"client":"Crescent Communities","sent":17,"opened":7,"openRate":41.2,"clickRate":5.9},{"client":"Sumitomo Forestry America","sent":71,"opened":29,"openRate":40.8,"clickRate":12.7},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":40.0},{"client":"MASCO Corporation","sent":53,"opened":21,"openRate":39.6,"clickRate":0.0},{"client":"Tricon Capital Group","sent":46,"opened":18,"openRate":39.1,"clickRate":8.7},{"client":"Van Metre Companies","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Pahlisch Homes","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Foremost Pacific Group","sent":13,"opened":5,"openRate":38.5,"clickRate":15.4},{"client":"Touchstone Living","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Illinois Tool Works","sent":43,"opened":16,"openRate":37.2,"clickRate":4.7},{"client":"Turner Homes, LLC","sent":27,"opened":10,"openRate":37.0,"clickRate":3.7},{"client":"Hayden Homes","sent":30,"opened":11,"openRate":36.7,"clickRate":3.3},{"client":"Van Daele Homes","sent":11,"opened":4,"openRate":36.4,"clickRate":18.2},{"client":"Green Brick Partners","sent":25,"opened":9,"openRate":36.0,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":14,"openRate":35.9,"clickRate":7.7},{"client":"Centric Infrastructure Group","sent":14,"opened":5,"openRate":35.7,"clickRate":0.0},{"client":"NVR Baltimore/DC","sent":111,"opened":39,"openRate":35.1,"clickRate":18.0},{"client":"DRB","sent":46,"opened":16,"openRate":34.8,"clickRate":21.7},{"client":"Sekisui","sent":64,"opened":22,"openRate":34.4,"clickRate":12.5},{"client":"Apollo Global Real Estate Management","sent":85,"opened":29,"openRate":34.1,"clickRate":3.5},{"client":"PulteGroup","sent":224,"opened":75,"openRate":33.5,"clickRate":5.4},{"client":"Land Sale TX","sent":6,"opened":2,"openRate":33.3,"clickRate":33.3},{"client":"Capital Fund 1","sent":21,"opened":7,"openRate":33.3,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":6,"openRate":33.3,"clickRate":11.1},{"client":"Trilantic Capital Partners","sent":12,"opened":4,"openRate":33.3,"clickRate":8.3},{"client":"DR Horton","sent":82,"opened":27,"openRate":32.9,"clickRate":19.5},{"client":"Perry Homes","sent":49,"opened":16,"openRate":32.7,"clickRate":8.2},{"client":"US LBM Holdings","sent":415,"opened":134,"openRate":32.3,"clickRate":4.3},{"client":"K Hovnanian","sent":116,"opened":37,"openRate":31.9,"clickRate":10.3},{"client":"Greystone","sent":19,"opened":6,"openRate":31.6,"clickRate":5.3},{"client":"Caldwell Companies","sent":32,"opened":10,"openRate":31.2,"clickRate":3.1},{"client":"Rockpoint Group, LLC","sent":32,"opened":10,"openRate":31.2,"clickRate":0.0},{"client":"Ashlar Development","sent":16,"opened":5,"openRate":31.2,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":3,"openRate":30.0,"clickRate":0.0},{"client":"Park Square Homes","sent":17,"opened":5,"openRate":29.4,"clickRate":11.8},{"client":"Invitation Homes","sent":76,"opened":22,"openRate":28.9,"clickRate":1.3},{"client":"Arixa Capital","sent":28,"opened":8,"openRate":28.6,"clickRate":0.0},{"client":"Taylor Morrison-Darling Homes - DFW","sent":14,"opened":4,"openRate":28.6,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":6.5},{"client":"MileStone Community Builders","sent":43,"opened":12,"openRate":27.9,"clickRate":9.3},{"client":"Taylor Morrison- Houston","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"Easton Development Company","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"CMC","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Argosy Real Estate","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Meritage Homes","sent":138,"opened":34,"openRate":24.6,"clickRate":11.6},{"client":"MUFG Bank","sent":37,"opened":9,"openRate":24.3,"clickRate":5.4},{"client":"NVR Florida","sent":54,"opened":13,"openRate":24.1,"clickRate":9.3},{"client":"Homes by WestBay","sent":43,"opened":10,"openRate":23.3,"clickRate":0.0},{"client":"Lowes","sent":30,"opened":7,"openRate":23.3,"clickRate":0.0},{"client":"Third Coast Bank","sent":31,"opened":7,"openRate":22.6,"clickRate":9.7},{"client":"Walton Global Holdings","sent":156,"opened":35,"openRate":22.4,"clickRate":3.8},{"client":"Preston Hollow Capital","sent":18,"opened":4,"openRate":22.2,"clickRate":5.6},{"client":"Summit Materials - Central","sent":9,"opened":2,"openRate":22.2,"clickRate":0.0},{"client":"Highland Homes","sent":72,"opened":16,"openRate":22.2,"clickRate":2.8},{"client":"Inland Homebuilding Group","sent":14,"opened":3,"openRate":21.4,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":96,"opened":20,"openRate":20.8,"clickRate":0.0},{"client":"Summit Materials - Texas","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"SiEnergy","sent":36,"opened":7,"openRate":19.4,"clickRate":0.0},{"client":"Replay Destinations","sent":11,"opened":2,"openRate":18.2,"clickRate":0.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":4,"openRate":17.4,"clickRate":8.7},{"client":"Toorak Capital Partners LLC","sent":29,"opened":5,"openRate":17.2,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":58,"opened":10,"openRate":17.2,"clickRate":3.4},{"client":"KB Home","sent":30,"opened":5,"openRate":16.7,"clickRate":16.7},{"client":"Taylor Morrison - All Markets","sent":90,"opened":15,"openRate":16.7,"clickRate":2.2},{"client":"Wilson Homes","sent":12,"opened":2,"openRate":16.7,"clickRate":16.7},{"client":"MainVue","sent":6,"opened":1,"openRate":16.7,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":20,"opened":3,"openRate":15.0,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":14.3},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":3,"openRate":12.5,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":2,"openRate":12.5,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":19,"openRate":11.2,"clickRate":2.4},{"client":"Bank of America Merrill Lynch","sent":39,"opened":4,"openRate":10.3,"clickRate":5.1},{"client":"Challenger Homes","sent":10,"opened":1,"openRate":10.0,"clickRate":0.0},{"client":"California Bank & Trust","sent":62,"opened":5,"openRate":8.1,"clickRate":1.6},{"client":"Greenhawk","sent":14,"opened":1,"openRate":7.1,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":23,"opened":1,"openRate":4.3,"clickRate":0.0},{"client":"Beazer Homes","sent":137,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"The Signorelli Company","sent":17,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Varde Partners","sent":14,"opened":0,"openRate":0.0,"clickRate":0.0}],"apr":[{"client":"National Mortgage Insurance","sent":39,"opened":38,"openRate":97.4,"clickRate":0.0},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":13.6},{"client":"Kodiak Building Partners","sent":27,"opened":24,"openRate":88.9,"clickRate":7.4},{"client":"Teichert","sent":8,"opened":7,"openRate":87.5,"clickRate":0.0},{"client":"Hearthstone","sent":12,"opened":10,"openRate":83.3,"clickRate":0.0},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":40.0},{"client":"Tim Lewis Communities","sent":5,"opened":4,"openRate":80.0,"clickRate":20.0},{"client":"Alliance Bank of Arizona","sent":60,"opened":48,"openRate":80.0,"clickRate":6.7},{"client":"South Texas Brick & Stone","sent":9,"opened":7,"openRate":77.8,"clickRate":11.1},{"client":"Stock Development","sent":25,"opened":19,"openRate":76.0,"clickRate":4.0},{"client":"DMB Development","sent":12,"opened":9,"openRate":75.0,"clickRate":16.7},{"client":"Villa Homes","sent":12,"opened":9,"openRate":75.0,"clickRate":8.3},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":11.5},{"client":"Kodiak Interiors Group","sent":6,"opened":4,"openRate":66.7,"clickRate":0.0},{"client":"Construction Resources","sent":23,"opened":15,"openRate":65.2,"clickRate":8.7},{"client":"Van Daele Homes","sent":11,"opened":7,"openRate":63.6,"clickRate":45.5},{"client":"Trumark Homes","sent":41,"opened":26,"openRate":63.4,"clickRate":12.2},{"client":"Empire Communities","sent":27,"opened":17,"openRate":63.0,"clickRate":18.5},{"client":"Touchstone Living","sent":8,"opened":5,"openRate":62.5,"clickRate":12.5},{"client":"Gradison Design Build","sent":8,"opened":5,"openRate":62.5,"clickRate":25.0},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":0.0},{"client":"Hines","sent":33,"opened":20,"openRate":60.6,"clickRate":6.1},{"client":"Spring Garden Capital Group","sent":5,"opened":3,"openRate":60.0,"clickRate":40.0},{"client":"Asahi Kasei Homes North America","sent":10,"opened":6,"openRate":60.0,"clickRate":0.0},{"client":"Century Communities","sent":152,"opened":91,"openRate":59.9,"clickRate":9.2},{"client":"NVR Baltimore/DC","sent":111,"opened":66,"openRate":59.5,"clickRate":17.1},{"client":"Hillwood Communities","sent":27,"opened":16,"openRate":59.3,"clickRate":0.0},{"client":"IHP Capital Partners","sent":17,"opened":10,"openRate":58.8,"clickRate":0.0},{"client":"Lone Star Funds","sent":57,"opened":33,"openRate":57.9,"clickRate":0.0},{"client":"HomeFed","sent":14,"opened":8,"openRate":57.1,"clickRate":7.1},{"client":"Shea Homes","sent":133,"opened":75,"openRate":56.4,"clickRate":9.8},{"client":"Caldwell Companies","sent":16,"opened":9,"openRate":56.2,"clickRate":0.0},{"client":"Mungo Companies","sent":9,"opened":5,"openRate":55.6,"clickRate":11.1},{"client":"The New Home Company","sent":57,"opened":31,"openRate":54.4,"clickRate":19.3},{"client":"BPG Acquisitions LLC","sent":181,"opened":98,"openRate":54.1,"clickRate":9.4},{"client":"Tricon Capital Group","sent":45,"opened":24,"openRate":53.3,"clickRate":2.2},{"client":"Greystone","sent":19,"opened":10,"openRate":52.6,"clickRate":15.8},{"client":"Smith Douglas Homes","sent":40,"opened":21,"openRate":52.5,"clickRate":10.0},{"client":"General Shale Brick Inc.","sent":21,"opened":11,"openRate":52.4,"clickRate":19.0},{"client":"SimplyHome","sent":23,"opened":12,"openRate":52.2,"clickRate":0.0},{"client":"MainVue","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Trilantic Capital Partners","sent":12,"opened":6,"openRate":50.0,"clickRate":0.0},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"GTIS Partners","sent":28,"opened":14,"openRate":50.0,"clickRate":0.0},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"Howard Hughes","sent":26,"opened":13,"openRate":50.0,"clickRate":7.7},{"client":"Illinois Tool Works","sent":44,"opened":22,"openRate":50.0,"clickRate":4.5},{"client":"Rockpoint Group, LLC","sent":32,"opened":16,"openRate":50.0,"clickRate":3.1},{"client":"Rancho Mission Viejo","sent":14,"opened":7,"openRate":50.0,"clickRate":7.1},{"client":"Clayton Properties Group","sent":45,"opened":22,"openRate":48.9,"clickRate":24.4},{"client":"Crown Community Development","sent":21,"opened":10,"openRate":47.6,"clickRate":19.0},{"client":"Sumitomo Forestry America","sent":72,"opened":34,"openRate":47.2,"clickRate":15.3},{"client":"Cardel Group of Companies","sent":17,"opened":8,"openRate":47.1,"clickRate":17.6},{"client":"KTGY","sent":43,"opened":20,"openRate":46.5,"clickRate":4.7},{"client":"Mattamy Homes","sent":201,"opened":92,"openRate":45.8,"clickRate":13.9},{"client":"Green Brick Partners","sent":22,"opened":10,"openRate":45.5,"clickRate":9.1},{"client":"TRI Pointe Homes","sent":228,"opened":102,"openRate":44.7,"clickRate":9.6},{"client":"Centric Fiber","sent":9,"opened":4,"openRate":44.4,"clickRate":0.0},{"client":"Trez Capital","sent":55,"opened":24,"openRate":43.6,"clickRate":9.1},{"client":"Kitson&Partners","sent":21,"opened":9,"openRate":42.9,"clickRate":0.0},{"client":"LGI Homes","sent":26,"opened":11,"openRate":42.3,"clickRate":0.0},{"client":"Sekisui","sent":78,"opened":32,"openRate":41.0,"clickRate":10.3},{"client":"Apollo Global Real Estate Management","sent":82,"opened":33,"openRate":40.2,"clickRate":1.2},{"client":"KB Home","sent":15,"opened":6,"openRate":40.0,"clickRate":40.0},{"client":"Pahlisch Homes","sent":15,"opened":6,"openRate":40.0,"clickRate":6.7},{"client":"Board of Advisors","sent":10,"opened":4,"openRate":40.0,"clickRate":0.0},{"client":"PulteGroup","sent":222,"opened":87,"openRate":39.2,"clickRate":10.8},{"client":"Pacific Lifestyle Homes","sent":31,"opened":12,"openRate":38.7,"clickRate":0.0},{"client":"Capital Fund 1","sent":21,"opened":8,"openRate":38.1,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":29,"opened":11,"openRate":37.9,"clickRate":3.4},{"client":"Angelo Gordon & Co","sent":22,"opened":8,"openRate":36.4,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":14,"opened":5,"openRate":35.7,"clickRate":0.0},{"client":"Van Metre Companies","sent":28,"opened":10,"openRate":35.7,"clickRate":3.6},{"client":"Crescent Communities","sent":17,"opened":6,"openRate":35.3,"clickRate":0.0},{"client":"K Hovnanian","sent":114,"opened":38,"openRate":33.3,"clickRate":9.6},{"client":"Hayden Homes","sent":30,"opened":10,"openRate":33.3,"clickRate":6.7},{"client":"GoldenTree Asset Management","sent":12,"opened":4,"openRate":33.3,"clickRate":8.3},{"client":"Argosy Real Estate","sent":24,"opened":8,"openRate":33.3,"clickRate":0.0},{"client":"Invitation Homes","sent":89,"opened":28,"openRate":31.5,"clickRate":3.4},{"client":"Pacific Communities Builder","sent":16,"opened":5,"openRate":31.2,"clickRate":0.0},{"client":"Centric Infrastructure Group","sent":13,"opened":4,"openRate":30.8,"clickRate":7.7},{"client":"Park Square Homes","sent":17,"opened":5,"openRate":29.4,"clickRate":11.8},{"client":"MASCO Corporation","sent":104,"opened":30,"openRate":28.8,"clickRate":1.0},{"client":"Arixa Capital","sent":28,"opened":8,"openRate":28.6,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":8.7},{"client":"Preston Hollow Capital","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"DR Horton","sent":83,"opened":23,"openRate":27.7,"clickRate":14.5},{"client":"Boulder Creek Neighborhoods","sent":11,"opened":3,"openRate":27.3,"clickRate":18.2},{"client":"DRB","sent":47,"opened":12,"openRate":25.5,"clickRate":10.6},{"client":"Meritage Homes","sent":139,"opened":35,"openRate":25.2,"clickRate":11.5},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"CMC","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Easton Development Company","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"Taylor Morrison- Houston","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"Perry Homes","sent":49,"opened":12,"openRate":24.5,"clickRate":6.1},{"client":"The Signorelli Company","sent":17,"opened":4,"openRate":23.5,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":102,"opened":24,"openRate":23.5,"clickRate":1.0},{"client":"The Sterling Group","sent":13,"opened":3,"openRate":23.1,"clickRate":0.0},{"client":"Texas Capital Bank","sent":22,"opened":5,"openRate":22.7,"clickRate":0.0},{"client":"Varde Partners","sent":14,"opened":3,"openRate":21.4,"clickRate":7.1},{"client":"Turner Homes, LLC","sent":28,"opened":6,"openRate":21.4,"clickRate":3.6},{"client":"Kennedy Lewis Investment Management","sent":38,"opened":8,"openRate":21.1,"clickRate":5.3},{"client":"NVR Florida","sent":54,"opened":11,"openRate":20.4,"clickRate":3.7},{"client":"Taylor Morrison - All Markets","sent":89,"opened":18,"openRate":20.2,"clickRate":4.5},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Toll Brothers","sent":297,"opened":59,"openRate":19.9,"clickRate":8.4},{"client":"Lowes","sent":31,"opened":6,"openRate":19.4,"clickRate":0.0},{"client":"California Bank & Trust","sent":31,"opened":6,"openRate":19.4,"clickRate":9.7},{"client":"Replay Destinations","sent":11,"opened":2,"openRate":18.2,"clickRate":18.2},{"client":"Taylor Morrison- Florida Markets","sent":22,"opened":4,"openRate":18.2,"clickRate":9.1},{"client":"MUFG Bank","sent":36,"opened":6,"openRate":16.7,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":27,"openRate":15.9,"clickRate":4.7},{"client":"Greenhawk","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":14.3},{"client":"RAM Real Estate Capital","sent":8,"opened":1,"openRate":12.5,"clickRate":12.5},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Bank of America Merrill Lynch","sent":19,"opened":2,"openRate":10.5,"clickRate":0.0},{"client":"Beazer Homes","sent":139,"opened":5,"openRate":3.6,"clickRate":2.9},{"client":"Challenger Homes","sent":5,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"M/I Homes","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0}],"may":[{"client":"Zillow","sent":42,"opened":41,"openRate":97.6,"clickRate":2.4},{"client":"National Mortgage Insurance","sent":39,"opened":38,"openRate":97.4,"clickRate":2.6},{"client":"Freehold Capital Management","sent":22,"opened":21,"openRate":95.5,"clickRate":4.5},{"client":"Intracorp - Austin","sent":14,"opened":13,"openRate":92.9,"clickRate":0.0},{"client":"Intracorp - OC/LA","sent":14,"opened":13,"openRate":92.9,"clickRate":7.1},{"client":"Hearthstone","sent":12,"opened":11,"openRate":91.7,"clickRate":0.0},{"client":"Intracorp - Seattle","sent":10,"opened":9,"openRate":90.0,"clickRate":10.0},{"client":"DMB Development","sent":12,"opened":10,"openRate":83.3,"clickRate":16.7},{"client":"Kodiak Interiors Group","sent":6,"opened":5,"openRate":83.3,"clickRate":0.0},{"client":"Chartwell Escrow","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"HomeFed","sent":14,"opened":11,"openRate":78.6,"clickRate":0.0},{"client":"RAM Real Estate Capital","sent":9,"opened":7,"openRate":77.8,"clickRate":33.3},{"client":"Rancho Mission Viejo","sent":13,"opened":10,"openRate":76.9,"clickRate":0.0},{"client":"Wan Bridge","sent":30,"opened":23,"openRate":76.7,"clickRate":6.7},{"client":"Ashlar Development","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Villa Homes","sent":12,"opened":9,"openRate":75.0,"clickRate":8.3},{"client":"Gradison Design Build","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Camelot Homes","sent":18,"opened":13,"openRate":72.2,"clickRate":0.0},{"client":"IHP Capital Partners","sent":17,"opened":12,"openRate":70.6,"clickRate":0.0},{"client":"Park Square Homes","sent":17,"opened":12,"openRate":70.6,"clickRate":11.8},{"client":"Sancerra Management","sent":10,"opened":7,"openRate":70.0,"clickRate":30.0},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":19.2},{"client":"Caldwell Companies","sent":16,"opened":11,"openRate":68.8,"clickRate":25.0},{"client":"Land Sale TX","sent":3,"opened":2,"openRate":66.7,"clickRate":33.3},{"client":"Edge Homes","sent":6,"opened":4,"openRate":66.7,"clickRate":0.0},{"client":"Stock Development","sent":24,"opened":16,"openRate":66.7,"clickRate":0.0},{"client":"Trumark Homes","sent":42,"opened":27,"openRate":64.3,"clickRate":4.8},{"client":"Van Daele Homes","sent":11,"opened":7,"openRate":63.6,"clickRate":18.2},{"client":"Weekley Group of Companies","sent":137,"opened":87,"openRate":63.5,"clickRate":9.5},{"client":"Touchstone Living","sent":8,"opened":5,"openRate":62.5,"clickRate":0.0},{"client":"Teichert","sent":8,"opened":5,"openRate":62.5,"clickRate":25.0},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":4.8},{"client":"Wisenbaker Builder Services","sent":31,"opened":19,"openRate":61.3,"clickRate":3.2},{"client":"Johnson Development Corp.","sent":59,"opened":36,"openRate":61.0,"clickRate":3.4},{"client":"Construction Resources","sent":23,"opened":14,"openRate":60.9,"clickRate":13.0},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Green Brick Partners","sent":22,"opened":13,"openRate":59.1,"clickRate":13.6},{"client":"RESICAP","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"DMB Associates","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"Gamut Capital Management","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"Tricon Capital Group","sent":44,"opened":25,"openRate":56.8,"clickRate":9.1},{"client":"General Shale Brick Inc.","sent":23,"opened":13,"openRate":56.5,"clickRate":17.4},{"client":"SimplyHome","sent":25,"opened":14,"openRate":56.0,"clickRate":0.0},{"client":"Integral Communities","sent":34,"opened":19,"openRate":55.9,"clickRate":5.9},{"client":"BPG Acquisitions LLC","sent":181,"opened":101,"openRate":55.8,"clickRate":9.4},{"client":"Shea Homes","sent":133,"opened":74,"openRate":55.6,"clickRate":9.0},{"client":"Hillwood Communities","sent":27,"opened":15,"openRate":55.6,"clickRate":3.7},{"client":"Luxor Capital Group LP","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"Empire Communities","sent":27,"opened":15,"openRate":55.6,"clickRate":7.4},{"client":"Smith Douglas Homes","sent":40,"opened":22,"openRate":55.0,"clickRate":10.0},{"client":"Crown Community Development","sent":22,"opened":12,"openRate":54.5,"clickRate":0.0},{"client":"Lone Star Funds","sent":57,"opened":31,"openRate":54.4,"clickRate":0.0},{"client":"KB Home","sent":17,"opened":9,"openRate":52.9,"clickRate":17.6},{"client":"Century Communities","sent":152,"opened":80,"openRate":52.6,"clickRate":5.3},{"client":"Taylor Morrison- Florida Markets","sent":21,"opened":11,"openRate":52.4,"clickRate":14.3},{"client":"GTIS Partners","sent":29,"opened":15,"openRate":51.7,"clickRate":3.4},{"client":"Stone Martin Builders","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":9,"openRate":50.0,"clickRate":5.6},{"client":"Board of Advisors","sent":10,"opened":5,"openRate":50.0,"clickRate":0.0},{"client":"Asahi Kasei Homes North America","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":14,"opened":7,"openRate":50.0,"clickRate":7.1},{"client":"LWR Communities","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"Easton Development Company","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"Hines","sent":32,"opened":16,"openRate":50.0,"clickRate":3.1},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Howard Hughes","sent":26,"opened":13,"openRate":50.0,"clickRate":3.8},{"client":"KTGY","sent":43,"opened":21,"openRate":48.8,"clickRate":4.7},{"client":"Hayden Homes","sent":27,"opened":13,"openRate":48.1,"clickRate":11.1},{"client":"Crescent Communities","sent":17,"opened":8,"openRate":47.1,"clickRate":0.0},{"client":"Cardel Group of Companies","sent":17,"opened":8,"openRate":47.1,"clickRate":0.0},{"client":"Rockpoint Group, LLC","sent":32,"opened":15,"openRate":46.9,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":6,"openRate":46.2,"clickRate":0.0},{"client":"MileStone Community Builders","sent":22,"opened":10,"openRate":45.5,"clickRate":4.5},{"client":"Pacific Lifestyle Homes","sent":31,"opened":14,"openRate":45.2,"clickRate":0.0},{"client":"Shelter Asset Management","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"LGI Homes","sent":27,"opened":12,"openRate":44.4,"clickRate":3.7},{"client":"Mungo Companies","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"TRI Pointe Homes","sent":228,"opened":99,"openRate":43.4,"clickRate":7.5},{"client":"Trez Capital","sent":54,"opened":23,"openRate":42.6,"clickRate":5.6},{"client":"The New Home Company","sent":61,"opened":26,"openRate":42.6,"clickRate":11.5},{"client":"Sumitomo Forestry America","sent":78,"opened":33,"openRate":42.3,"clickRate":10.3},{"client":"Illinois Tool Works","sent":43,"opened":18,"openRate":41.9,"clickRate":4.7},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":20.0},{"client":"Westbrook Partners","sent":5,"opened":2,"openRate":40.0,"clickRate":0.0},{"client":"Preston Hollow Capital","sent":18,"opened":7,"openRate":38.9,"clickRate":5.6},{"client":"Apollo Global Real Estate Management","sent":83,"opened":32,"openRate":38.6,"clickRate":1.2},{"client":"Trilantic Capital Partners","sent":13,"opened":5,"openRate":38.5,"clickRate":0.0},{"client":"Kitson&Partners","sent":21,"opened":8,"openRate":38.1,"clickRate":0.0},{"client":"Taylor Morrison - All Markets","sent":87,"opened":33,"openRate":37.9,"clickRate":12.6},{"client":"Van Metre Companies","sent":29,"opened":11,"openRate":37.9,"clickRate":3.4},{"client":"Sekisui","sent":77,"opened":29,"openRate":37.7,"clickRate":10.4},{"client":"Centric Fiber","sent":8,"opened":3,"openRate":37.5,"clickRate":25.0},{"client":"Pahlisch Homes","sent":16,"opened":6,"openRate":37.5,"clickRate":0.0},{"client":"Greystone","sent":19,"opened":7,"openRate":36.8,"clickRate":5.3},{"client":"Boulder Creek Neighborhoods","sent":11,"opened":4,"openRate":36.4,"clickRate":9.1},{"client":"Replay Destinations","sent":11,"opened":4,"openRate":36.4,"clickRate":0.0},{"client":"DRB","sent":47,"opened":17,"openRate":36.2,"clickRate":12.8},{"client":"Turner Homes, LLC","sent":28,"opened":10,"openRate":35.7,"clickRate":0.0},{"client":"The Signorelli Company","sent":17,"opened":6,"openRate":35.3,"clickRate":5.9},{"client":"Capital Fund 1","sent":23,"opened":8,"openRate":34.8,"clickRate":8.7},{"client":"MainVue","sent":6,"opened":2,"openRate":33.3,"clickRate":0.0},{"client":"CMC","sent":9,"opened":3,"openRate":33.3,"clickRate":22.2},{"client":"Arixa Capital","sent":27,"opened":9,"openRate":33.3,"clickRate":3.7},{"client":"GoldenTree Asset Management","sent":12,"opened":4,"openRate":33.3,"clickRate":0.0},{"client":"Southern Land Company","sent":43,"opened":14,"openRate":32.6,"clickRate":2.3},{"client":"Invitation Homes","sent":86,"opened":28,"openRate":32.6,"clickRate":2.3},{"client":"Homes by WestBay","sent":22,"opened":7,"openRate":31.8,"clickRate":0.0},{"client":"K Hovnanian","sent":114,"opened":35,"openRate":30.7,"clickRate":7.0},{"client":"Highland Homes","sent":36,"opened":11,"openRate":30.6,"clickRate":2.8},{"client":"US LBM Holdings","sent":206,"opened":63,"openRate":30.6,"clickRate":1.5},{"client":"Kodiak Building Partners","sent":27,"opened":8,"openRate":29.6,"clickRate":7.4},{"client":"Third Coast Bank","sent":17,"opened":5,"openRate":29.4,"clickRate":5.9},{"client":"Taylor Morrison- Houston","sent":24,"opened":7,"openRate":29.2,"clickRate":8.3},{"client":"Argosy Real Estate","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"NVR Baltimore/DC","sent":111,"opened":32,"openRate":28.8,"clickRate":11.7},{"client":"Inland Homebuilding Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Greenhawk","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Taylor Morrison-Darling Homes - DFW","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":11,"openRate":28.2,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":144,"opened":40,"openRate":27.8,"clickRate":2.1},{"client":"DR Horton","sent":83,"opened":23,"openRate":27.7,"clickRate":7.2},{"client":"Toorak Capital Partners LLC","sent":29,"opened":8,"openRate":27.6,"clickRate":3.4},{"client":"Perry Homes","sent":64,"opened":17,"openRate":26.6,"clickRate":1.6},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"SR Homes","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":60,"opened":15,"openRate":25.0,"clickRate":3.3},{"client":"Texas Capital Bank","sent":22,"opened":5,"openRate":22.7,"clickRate":0.0},{"client":"Lowes","sent":31,"opened":7,"openRate":22.6,"clickRate":0.0},{"client":"SiEnergy","sent":18,"opened":4,"openRate":22.2,"clickRate":5.6},{"client":"Toll Brothers","sent":304,"opened":66,"openRate":21.7,"clickRate":8.2},{"client":"Meritage Homes","sent":140,"opened":30,"openRate":21.4,"clickRate":10.0},{"client":"Varde Partners","sent":14,"opened":3,"openRate":21.4,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Challenger Homes","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":3,"openRate":18.8,"clickRate":0.0},{"client":"Walton Global Holdings","sent":79,"opened":14,"openRate":17.7,"clickRate":3.8},{"client":"NVR Florida","sent":54,"opened":9,"openRate":16.7,"clickRate":3.7},{"client":"MUFG Bank","sent":33,"opened":5,"openRate":15.2,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"California Bank & Trust","sent":32,"opened":4,"openRate":12.5,"clickRate":3.1},{"client":"Bank of America Merrill Lynch","sent":20,"opened":1,"openRate":5.0,"clickRate":0.0},{"client":"Beazer Homes","sent":140,"opened":4,"openRate":2.9,"clickRate":0.7}]};
- 
- 
-const months = ['jan','feb','mar','apr','may'];
-const monthLabels = ['January','February','March','April','May'];
+const rawData = {"jan":[{"client":"National Mortgage Insurance","sent":39,"opened":37,"openRate":94.9,"clickRate":10.3},{"client":"Meritage Homes","sent":147,"opened":135,"openRate":91.8,"clickRate":17.0},{"client":"Intracorp - OC/LA","sent":15,"opened":13,"openRate":86.7,"clickRate":6.7},{"client":"Intracorp - Seattle","sent":31,"opened":25,"openRate":80.6,"clickRate":12.9},{"client":"ResiBuilt Homes","sent":19,"opened":15,"openRate":78.9,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":30,"opened":23,"openRate":76.7,"clickRate":13.3},{"client":"HomeFed","sent":16,"opened":12,"openRate":75.0,"clickRate":6.2},{"client":"Rancho Mission Viejo","sent":15,"opened":11,"openRate":73.3,"clickRate":6.7},{"client":"Hearthstone","sent":11,"opened":8,"openRate":72.7,"clickRate":0.0},{"client":"Weekley Group of Companies","sent":136,"opened":93,"openRate":68.4,"clickRate":11.8},{"client":"South Texas Brick & Stone","sent":9,"opened":6,"openRate":66.7,"clickRate":11.1},{"client":"Hillwood Communities","sent":32,"opened":21,"openRate":65.6,"clickRate":6.2},{"client":"Lone Star Funds","sent":63,"opened":41,"openRate":65.1,"clickRate":0.0},{"client":"Century Communities","sent":158,"opened":101,"openRate":63.9,"clickRate":10.1},{"client":"Stock Development","sent":27,"opened":17,"openRate":63.0,"clickRate":0.0},{"client":"GTIS Partners","sent":35,"opened":22,"openRate":62.9,"clickRate":0.0},{"client":"IHP Capital Partners","sent":24,"opened":15,"openRate":62.5,"clickRate":4.2},{"client":"Luxor Capital Group LP","sent":8,"opened":5,"openRate":62.5,"clickRate":0.0},{"client":"Smith Douglas Homes","sent":33,"opened":20,"openRate":60.6,"clickRate":9.1},{"client":"Shea Homes","sent":147,"opened":89,"openRate":60.5,"clickRate":15.0},{"client":"SimplyHome","sent":25,"opened":15,"openRate":60.0,"clickRate":4.0},{"client":"Summit Materials - West","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"KTGY","sent":42,"opened":25,"openRate":59.5,"clickRate":4.8},{"client":"Crown Community Development","sent":27,"opened":16,"openRate":59.3,"clickRate":0.0},{"client":"Trilantic Capital Partners","sent":12,"opened":7,"openRate":58.3,"clickRate":8.3},{"client":"Fundrise","sent":21,"opened":12,"openRate":57.1,"clickRate":0.0},{"client":"Green Brick Partners","sent":29,"opened":16,"openRate":55.2,"clickRate":13.8},{"client":"Hines","sent":24,"opened":13,"openRate":54.2,"clickRate":4.2},{"client":"Tricon Capital Group","sent":55,"opened":29,"openRate":52.7,"clickRate":5.5},{"client":"BPG Acquisitions LLC","sent":181,"opened":95,"openRate":52.5,"clickRate":7.2},{"client":"Westbrook Partners","sent":10,"opened":5,"openRate":50.0,"clickRate":20.0},{"client":"Smith Family Homes","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"KB Home","sent":8,"opened":4,"openRate":50.0,"clickRate":25.0},{"client":"Villa Homes","sent":10,"opened":5,"openRate":50.0,"clickRate":10.0},{"client":"Kodiak Building Partners","sent":46,"opened":22,"openRate":47.8,"clickRate":6.5},{"client":"Empire Communities","sent":30,"opened":14,"openRate":46.7,"clickRate":3.3},{"client":"Freehold Capital Management","sent":28,"opened":13,"openRate":46.4,"clickRate":10.7},{"client":"Integral Communities","sent":112,"opened":52,"openRate":46.4,"clickRate":5.4},{"client":"Zillow","sent":56,"opened":26,"openRate":46.4,"clickRate":7.1},{"client":"Research","sent":1178,"opened":546,"openRate":46.3,"clickRate":7.4},{"client":"The New Home Company","sent":54,"opened":24,"openRate":44.4,"clickRate":13.0},{"client":"Teichert","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"Mattamy Homes","sent":91,"opened":40,"openRate":44.0,"clickRate":13.2},{"client":"Van Metre Companies","sent":16,"opened":7,"openRate":43.8,"clickRate":12.5},{"client":"Trumark Homes","sent":49,"opened":21,"openRate":42.9,"clickRate":8.2},{"client":"Oakpointe","sent":7,"opened":3,"openRate":42.9,"clickRate":14.3},{"client":"Renasant Bank","sent":7,"opened":3,"openRate":42.9,"clickRate":14.3},{"client":"Howard Hughes","sent":26,"opened":11,"openRate":42.3,"clickRate":3.8},{"client":"Kitson&Partners","sent":26,"opened":11,"openRate":42.3,"clickRate":3.8},{"client":"Trez Capital","sent":63,"opened":26,"openRate":41.3,"clickRate":7.9},{"client":"Preston Hollow Capital","sent":22,"opened":9,"openRate":40.9,"clickRate":9.1},{"client":"TRI Pointe Homes","sent":243,"opened":99,"openRate":40.7,"clickRate":7.4},{"client":"Sekisui","sent":65,"opened":26,"openRate":40.0,"clickRate":13.8},{"client":"Pahlisch Homes","sent":10,"opened":4,"openRate":40.0,"clickRate":20.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":9,"openRate":39.1,"clickRate":17.4},{"client":"Replay Destinations","sent":13,"opened":5,"openRate":38.5,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":37,"opened":14,"openRate":37.8,"clickRate":0.0},{"client":"Tim Lewis Communities","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Rockpoint Group, LLC","sent":32,"opened":12,"openRate":37.5,"clickRate":3.1},{"client":"NVR Baltimore/DC","sent":116,"opened":43,"openRate":37.1,"clickRate":19.8},{"client":"Taylor Morrison - All Markets","sent":92,"opened":34,"openRate":37.0,"clickRate":13.0},{"client":"Greystone","sent":19,"opened":7,"openRate":36.8,"clickRate":10.5},{"client":"Invitation Homes","sent":79,"opened":29,"openRate":36.7,"clickRate":5.1},{"client":"Illinois Tool Works","sent":44,"opened":16,"openRate":36.4,"clickRate":2.3},{"client":"PulteGroup","sent":222,"opened":80,"openRate":36.0,"clickRate":10.8},{"client":"K Hovnanian","sent":126,"opened":45,"openRate":35.7,"clickRate":5.6},{"client":"Hayden Homes","sent":31,"opened":11,"openRate":35.5,"clickRate":9.7},{"client":"Perry Homes","sent":52,"opened":18,"openRate":34.6,"clickRate":3.8},{"client":"Lowes","sent":29,"opened":10,"openRate":34.5,"clickRate":0.0},{"client":"Pacific Lifestyle Homes","sent":32,"opened":11,"openRate":34.4,"clickRate":3.1},{"client":"Touchstone Living","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Inland Homebuilding Group","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":15,"opened":5,"openRate":33.3,"clickRate":6.7},{"client":"Greenhawk","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Landsea Holdings Corporation","sent":33,"opened":11,"openRate":33.3,"clickRate":21.2},{"client":"MASCO Corporation","sent":55,"opened":18,"openRate":32.7,"clickRate":7.3},{"client":"Park Square Homes","sent":19,"opened":6,"openRate":31.6,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":4,"openRate":30.8,"clickRate":0.0},{"client":"NVR Florida","sent":56,"opened":17,"openRate":30.4,"clickRate":12.5},{"client":"US LBM Holdings","sent":205,"opened":61,"openRate":29.8,"clickRate":4.4},{"client":"Turner Homes, LLC","sent":27,"opened":8,"openRate":29.6,"clickRate":3.7},{"client":"Homes by WestBay","sent":24,"opened":7,"openRate":29.2,"clickRate":8.3},{"client":"DR Horton","sent":84,"opened":24,"openRate":28.6,"clickRate":8.3},{"client":"Kodiak Interiors Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Sancerra Management","sent":14,"opened":4,"openRate":28.6,"clickRate":7.1},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":10.9},{"client":"Texas Capital Bank","sent":26,"opened":7,"openRate":26.9,"clickRate":0.0},{"client":"Poly Global","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"Walton Global Holdings","sent":87,"opened":21,"openRate":24.1,"clickRate":1.1},{"client":"Van Daele Homes","sent":13,"opened":3,"openRate":23.1,"clickRate":7.7},{"client":"Bank of America Merrill Lynch","sent":18,"opened":4,"openRate":22.2,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":9,"opened":2,"openRate":22.2,"clickRate":0.0},{"client":"M/I Homes","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Varde Partners","sent":15,"opened":3,"openRate":20.0,"clickRate":6.7},{"client":"Summit Materials - Central","sent":10,"opened":2,"openRate":20.0,"clickRate":10.0},{"client":"San Joaquin Valley Homes","sent":10,"opened":2,"openRate":20.0,"clickRate":10.0},{"client":"Spring Garden Capital Group","sent":5,"opened":1,"openRate":20.0,"clickRate":20.0},{"client":"Pacific Communities Builder","sent":15,"opened":3,"openRate":20.0,"clickRate":0.0},{"client":"Third Coast Bank","sent":16,"opened":3,"openRate":18.8,"clickRate":6.2},{"client":"MUFG Bank","sent":28,"opened":5,"openRate":17.9,"clickRate":3.6},{"client":"Wilson Homes","sent":6,"opened":1,"openRate":16.7,"clickRate":0.0},{"client":"MainVue","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":29,"opened":4,"openRate":13.8,"clickRate":0.0},{"client":"Genesis Capital","sent":177,"opened":24,"openRate":13.6,"clickRate":0.6},{"client":"Highland Homes","sent":38,"opened":5,"openRate":13.2,"clickRate":2.6},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":1,"openRate":4.2,"clickRate":0.0},{"client":"Mungo Companies","sent":8,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0}],"feb":[{"client":"Weekley Group of Companies","sent":135,"opened":133,"openRate":98.5,"clickRate":97.8},{"client":"National Mortgage Insurance","sent":41,"opened":39,"openRate":95.1,"clickRate":2.4},{"client":"Meritage Homes","sent":138,"opened":127,"openRate":92.0,"clickRate":14.5},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":13.6},{"client":"Intracorp - OC/LA","sent":14,"opened":12,"openRate":85.7,"clickRate":14.3},{"client":"DMB Development","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"Intracorp - Seattle","sent":10,"opened":8,"openRate":80.0,"clickRate":0.0},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":40.0},{"client":"Intracorp - Austin","sent":14,"opened":11,"openRate":78.6,"clickRate":14.3},{"client":"Chartwell Escrow","sent":13,"opened":10,"openRate":76.9,"clickRate":30.8},{"client":"Gradison Design Build","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Empire Communities","sent":25,"opened":18,"openRate":72.0,"clickRate":12.0},{"client":"Ki-Star Real Estate","sent":7,"opened":5,"openRate":71.4,"clickRate":14.3},{"client":"HomeFed","sent":14,"opened":10,"openRate":71.4,"clickRate":0.0},{"client":"Villa Homes","sent":10,"opened":7,"openRate":70.0,"clickRate":10.0},{"client":"Rancho Mission Viejo","sent":13,"opened":9,"openRate":69.2,"clickRate":0.0},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":15.4},{"client":"Beazer Homes","sent":136,"opened":93,"openRate":68.4,"clickRate":19.1},{"client":"IHP Capital Partners","sent":17,"opened":11,"openRate":64.7,"clickRate":5.9},{"client":"Stock Development","sent":25,"opened":16,"openRate":64.0,"clickRate":0.0},{"client":"Hearthstone","sent":11,"opened":7,"openRate":63.6,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":30,"opened":19,"openRate":63.3,"clickRate":0.0},{"client":"Wan Bridge","sent":32,"opened":20,"openRate":62.5,"clickRate":3.1},{"client":"Caldwell Companies","sent":16,"opened":10,"openRate":62.5,"clickRate":6.2},{"client":"Century Communities","sent":149,"opened":93,"openRate":62.4,"clickRate":7.4},{"client":"Crown Community Development","sent":21,"opened":13,"openRate":61.9,"clickRate":9.5},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":0.0},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Hillwood Communities","sent":27,"opened":16,"openRate":59.3,"clickRate":3.7},{"client":"Crescent Communities","sent":17,"opened":10,"openRate":58.8,"clickRate":5.9},{"client":"Trumark Homes","sent":41,"opened":24,"openRate":58.5,"clickRate":4.9},{"client":"SimplyHome","sent":24,"opened":14,"openRate":58.3,"clickRate":0.0},{"client":"Arixa Capital","sent":26,"opened":15,"openRate":57.7,"clickRate":3.8},{"client":"Johnson Development Corp.","sent":59,"opened":34,"openRate":57.6,"clickRate":1.7},{"client":"Shea Homes","sent":137,"opened":78,"openRate":56.9,"clickRate":8.0},{"client":"Construction Resources","sent":23,"opened":13,"openRate":56.5,"clickRate":4.3},{"client":"South Texas Brick & Stone","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"Lone Star Funds","sent":62,"opened":34,"openRate":54.8,"clickRate":1.6},{"client":"Tricon Capital Group","sent":46,"opened":25,"openRate":54.3,"clickRate":2.2},{"client":"Zillow","sent":48,"opened":26,"openRate":54.2,"clickRate":4.2},{"client":"GTIS Partners","sent":30,"opened":16,"openRate":53.3,"clickRate":0.0},{"client":"Cardel Group of Companies","sent":17,"opened":9,"openRate":52.9,"clickRate":5.9},{"client":"ResiBuilt Homes","sent":17,"opened":9,"openRate":52.9,"clickRate":0.0},{"client":"Smith Douglas Homes","sent":34,"opened":18,"openRate":52.9,"clickRate":14.7},{"client":"MileStone Community Builders","sent":21,"opened":11,"openRate":52.4,"clickRate":0.0},{"client":"Mattamy Homes","sent":86,"opened":45,"openRate":52.3,"clickRate":12.8},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"LGI Homes","sent":26,"opened":13,"openRate":50.0,"clickRate":0.0},{"client":"Hines","sent":24,"opened":12,"openRate":50.0,"clickRate":0.0},{"client":"Mungo Companies","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Touchstone Living","sent":8,"opened":4,"openRate":50.0,"clickRate":12.5},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"Easton Development Company","sent":4,"opened":2,"openRate":50.0,"clickRate":25.0},{"client":"BPG Acquisitions LLC","sent":184,"opened":91,"openRate":49.5,"clickRate":7.6},{"client":"Research","sent":201,"opened":97,"openRate":48.3,"clickRate":7.5},{"client":"KTGY","sent":44,"opened":21,"openRate":47.7,"clickRate":4.5},{"client":"Kitson&Partners","sent":21,"opened":10,"openRate":47.6,"clickRate":4.8},{"client":"Howard Hughes","sent":26,"opened":12,"openRate":46.2,"clickRate":0.0},{"client":"Green Brick Partners","sent":24,"opened":11,"openRate":45.8,"clickRate":0.0},{"client":"TRI Pointe Homes","sent":236,"opened":107,"openRate":45.3,"clickRate":9.3},{"client":"Van Metre Companies","sent":16,"opened":7,"openRate":43.8,"clickRate":6.2},{"client":"MASCO Corporation","sent":53,"opened":23,"openRate":43.4,"clickRate":5.7},{"client":"Kodiak Interiors Group","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"Apollo Global Real Estate Management","sent":84,"opened":36,"openRate":42.9,"clickRate":1.2},{"client":"The New Home Company","sent":56,"opened":24,"openRate":42.9,"clickRate":19.6},{"client":"Trilantic Capital Partners","sent":12,"opened":5,"openRate":41.7,"clickRate":0.0},{"client":"Kodiak Building Partners","sent":34,"opened":14,"openRate":41.2,"clickRate":2.9},{"client":"Rockpoint Group, LLC","sent":32,"opened":13,"openRate":40.6,"clickRate":0.0},{"client":"Board of Advisors","sent":10,"opened":4,"openRate":40.0,"clickRate":0.0},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":20.0},{"client":"Van Daele Homes","sent":10,"opened":4,"openRate":40.0,"clickRate":40.0},{"client":"Summit Materials - West","sent":5,"opened":2,"openRate":40.0,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":30,"opened":12,"openRate":40.0,"clickRate":3.3},{"client":"Illinois Tool Works","sent":43,"opened":17,"openRate":39.5,"clickRate":2.3},{"client":"Landsea Holdings Corporation","sent":28,"opened":11,"openRate":39.3,"clickRate":21.4},{"client":"Pacific Lifestyle Homes","sent":31,"opened":12,"openRate":38.7,"clickRate":0.0},{"client":"Pahlisch Homes","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Trez Capital","sent":55,"opened":21,"openRate":38.2,"clickRate":5.5},{"client":"Capital Fund 1","sent":21,"opened":8,"openRate":38.1,"clickRate":4.8},{"client":"Teichert","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Ashlar Development","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Turner Homes, LLC","sent":27,"opened":10,"openRate":37.0,"clickRate":3.7},{"client":"Park Square Homes","sent":19,"opened":7,"openRate":36.8,"clickRate":0.0},{"client":"Sekisui","sent":64,"opened":23,"openRate":35.9,"clickRate":12.5},{"client":"KB Home","sent":14,"opened":5,"openRate":35.7,"clickRate":21.4},{"client":"Perry Homes","sent":49,"opened":17,"openRate":34.7,"clickRate":10.2},{"client":"PulteGroup","sent":222,"opened":77,"openRate":34.7,"clickRate":6.8},{"client":"Texas Capital Bank","sent":26,"opened":9,"openRate":34.6,"clickRate":3.8},{"client":"Asahi Kasei Homes North America","sent":9,"opened":3,"openRate":33.3,"clickRate":0.0},{"client":"Land Sale TX","sent":3,"opened":1,"openRate":33.3,"clickRate":33.3},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":13,"openRate":33.3,"clickRate":2.6},{"client":"NVR Baltimore/DC","sent":111,"opened":37,"openRate":33.3,"clickRate":10.8},{"client":"SiEnergy","sent":18,"opened":6,"openRate":33.3,"clickRate":5.6},{"client":"Argosy Real Estate","sent":24,"opened":8,"openRate":33.3,"clickRate":0.0},{"client":"US LBM Holdings","sent":207,"opened":68,"openRate":32.9,"clickRate":4.8},{"client":"Highland Homes","sent":37,"opened":12,"openRate":32.4,"clickRate":0.0},{"client":"Homes by WestBay","sent":22,"opened":7,"openRate":31.8,"clickRate":4.5},{"client":"Greystone","sent":19,"opened":6,"openRate":31.6,"clickRate":0.0},{"client":"Third Coast Bank","sent":16,"opened":5,"openRate":31.2,"clickRate":6.2},{"client":"Lowes","sent":29,"opened":9,"openRate":31.0,"clickRate":3.4},{"client":"Foremost Pacific Group","sent":13,"opened":4,"openRate":30.8,"clickRate":15.4},{"client":"K Hovnanian","sent":117,"opened":36,"openRate":30.8,"clickRate":7.7},{"client":"RAM Real Estate Capital","sent":10,"opened":3,"openRate":30.0,"clickRate":20.0},{"client":"Hayden Homes","sent":30,"opened":9,"openRate":30.0,"clickRate":3.3},{"client":"Taylor Morrison- Houston","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"Invitation Homes","sent":76,"opened":22,"openRate":28.9,"clickRate":2.6},{"client":"Taylor Morrison-Darling Homes - DFW","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Inland Homebuilding Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Preston Hollow Capital","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"The Signorelli Company","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":22,"opened":6,"openRate":27.3,"clickRate":0.0},{"client":"The Sterling Group","sent":11,"opened":3,"openRate":27.3,"clickRate":0.0},{"client":"Replay Destinations","sent":11,"opened":3,"openRate":27.3,"clickRate":0.0},{"client":"Centric Infrastructure Group","sent":15,"opened":4,"openRate":26.7,"clickRate":6.7},{"client":"SR Homes","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Smith Family Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"BRD Land & Investments","sent":8,"opened":2,"openRate":25.0,"clickRate":12.5},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":11,"openRate":23.9,"clickRate":2.2},{"client":"DR Horton","sent":80,"opened":19,"openRate":23.8,"clickRate":8.8},{"client":"Walton Global Holdings","sent":78,"opened":18,"openRate":23.1,"clickRate":5.1},{"client":"BB Living Residential","sent":18,"opened":4,"openRate":22.2,"clickRate":0.0},{"client":"NVR Florida","sent":54,"opened":12,"openRate":22.2,"clickRate":3.7},{"client":"Taylor Morrison - All Markets","sent":88,"opened":19,"openRate":21.6,"clickRate":3.4},{"client":"Summit Materials - Texas","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Westbrook Partners","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Renasant Bank","sent":5,"opened":1,"openRate":20.0,"clickRate":20.0},{"client":"Summit Materials - Central","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":29,"openRate":17.1,"clickRate":2.4},{"client":"MainVue","sent":6,"opened":1,"openRate":16.7,"clickRate":16.7},{"client":"MUFG Bank","sent":37,"opened":6,"openRate":16.2,"clickRate":2.7},{"client":"California Bank & Trust","sent":32,"opened":5,"openRate":15.6,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":58,"opened":9,"openRate":15.5,"clickRate":3.4},{"client":"Varde Partners","sent":15,"opened":2,"openRate":13.3,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":3,"openRate":12.5,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":2,"openRate":12.5,"clickRate":6.2},{"client":"CMC","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Bank of America Merrill Lynch","sent":18,"opened":2,"openRate":11.1,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":9,"opened":1,"openRate":11.1,"clickRate":0.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":2,"openRate":8.7,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Challenger Homes","sent":5,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Land Tejas Development","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Greenhawk","sent":7,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Wilson Homes","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0}],"mar":[{"client":"Weekley Group of Companies","sent":271,"opened":263,"openRate":97.0,"clickRate":52.0},{"client":"National Mortgage Insurance","sent":39,"opened":37,"openRate":94.9,"clickRate":0.0},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":9.1},{"client":"Intracorp - OC/LA","sent":28,"opened":24,"openRate":85.7,"clickRate":14.3},{"client":"Intracorp - Austin","sent":28,"opened":24,"openRate":85.7,"clickRate":10.7},{"client":"Texas Capital Bank","sent":21,"opened":18,"openRate":85.7,"clickRate":0.0},{"client":"Villa Homes","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":30.0},{"client":"Chartwell Escrow","sent":25,"opened":19,"openRate":76.0,"clickRate":20.0},{"client":"Hearthstone","sent":12,"opened":9,"openRate":75.0,"clickRate":0.0},{"client":"HomeFed","sent":14,"opened":10,"openRate":71.4,"clickRate":7.1},{"client":"ResiBuilt Homes","sent":17,"opened":12,"openRate":70.6,"clickRate":0.0},{"client":"Zillow","sent":89,"opened":61,"openRate":68.5,"clickRate":5.6},{"client":"Fundrise","sent":21,"opened":14,"openRate":66.7,"clickRate":0.0},{"client":"Hillwood Communities","sent":27,"opened":18,"openRate":66.7,"clickRate":0.0},{"client":"Wisenbaker Builder Services","sent":60,"opened":40,"openRate":66.7,"clickRate":3.3},{"client":"AG WIP Asset Management","sent":26,"opened":17,"openRate":65.4,"clickRate":15.4},{"client":"Johnson Development Corp.","sent":118,"opened":77,"openRate":65.3,"clickRate":5.1},{"client":"Stock Development","sent":25,"opened":16,"openRate":64.0,"clickRate":0.0},{"client":"Gradison Design Build","sent":8,"opened":5,"openRate":62.5,"clickRate":12.5},{"client":"Wan Bridge","sent":63,"opened":38,"openRate":60.3,"clickRate":6.3},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Summit Materials - West","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Empire Communities","sent":25,"opened":15,"openRate":60.0,"clickRate":8.0},{"client":"Cardel Group of Companies","sent":17,"opened":10,"openRate":58.8,"clickRate":5.9},{"client":"IHP Capital Partners","sent":17,"opened":10,"openRate":58.8,"clickRate":0.0},{"client":"DMB Development","sent":12,"opened":7,"openRate":58.3,"clickRate":8.3},{"client":"SimplyHome","sent":24,"opened":14,"openRate":58.3,"clickRate":0.0},{"client":"Construction Resources","sent":23,"opened":13,"openRate":56.5,"clickRate":8.7},{"client":"Hines","sent":32,"opened":18,"openRate":56.2,"clickRate":9.4},{"client":"KTGY","sent":43,"opened":24,"openRate":55.8,"clickRate":4.7},{"client":"South Texas Brick & Stone","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"General Shale Brick Inc.","sent":20,"opened":11,"openRate":55.0,"clickRate":15.0},{"client":"Century Communities","sent":148,"opened":81,"openRate":54.7,"clickRate":6.1},{"client":"Lone Star Funds","sent":57,"opened":31,"openRate":54.4,"clickRate":3.5},{"client":"Shea Homes","sent":135,"opened":73,"openRate":54.1,"clickRate":7.4},{"client":"Rancho Mission Viejo","sent":13,"opened":7,"openRate":53.8,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":7,"openRate":53.8,"clickRate":0.0},{"client":"GTIS Partners","sent":28,"opened":15,"openRate":53.6,"clickRate":3.6},{"client":"Integral Communities","sent":36,"opened":19,"openRate":52.8,"clickRate":13.9},{"client":"BPG Acquisitions LLC","sent":182,"opened":96,"openRate":52.7,"clickRate":11.5},{"client":"Kitson&Partners","sent":21,"opened":11,"openRate":52.4,"clickRate":0.0},{"client":"The New Home Company","sent":56,"opened":29,"openRate":51.8,"clickRate":17.9},{"client":"Trumark Homes","sent":41,"opened":21,"openRate":51.2,"clickRate":7.3},{"client":"Asahi Kasei Homes North America","sent":10,"opened":5,"openRate":50.0,"clickRate":0.0},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":33.3},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"RAM Real Estate Capital","sent":10,"opened":5,"openRate":50.0,"clickRate":10.0},{"client":"Teichert","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Research","sent":57,"opened":28,"openRate":49.1,"clickRate":5.3},{"client":"Kodiak Building Partners","sent":33,"opened":16,"openRate":48.5,"clickRate":6.1},{"client":"Pacific Lifestyle Homes","sent":31,"opened":15,"openRate":48.4,"clickRate":3.2},{"client":"Howard Hughes","sent":27,"opened":13,"openRate":48.1,"clickRate":3.7},{"client":"Crown Community Development","sent":21,"opened":10,"openRate":47.6,"clickRate":4.8},{"client":"Smith Douglas Homes","sent":38,"opened":18,"openRate":47.4,"clickRate":15.8},{"client":"Mattamy Homes","sent":92,"opened":43,"openRate":46.7,"clickRate":18.5},{"client":"Boulder Creek Neighborhoods","sent":13,"opened":6,"openRate":46.2,"clickRate":7.7},{"client":"Board of Advisors","sent":11,"opened":5,"openRate":45.5,"clickRate":0.0},{"client":"Trez Capital","sent":55,"opened":25,"openRate":45.5,"clickRate":5.5},{"client":"TRI Pointe Homes","sent":229,"opened":104,"openRate":45.4,"clickRate":9.6},{"client":"Mungo Companies","sent":9,"opened":4,"openRate":44.4,"clickRate":0.0},{"client":"RESICAP","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"Kodiak Interiors Group","sent":7,"opened":3,"openRate":42.9,"clickRate":0.0},{"client":"LGI Homes","sent":26,"opened":11,"openRate":42.3,"clickRate":7.7},{"client":"Crescent Communities","sent":17,"opened":7,"openRate":41.2,"clickRate":5.9},{"client":"Sumitomo Forestry America","sent":71,"opened":29,"openRate":40.8,"clickRate":12.7},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":40.0},{"client":"MASCO Corporation","sent":53,"opened":21,"openRate":39.6,"clickRate":0.0},{"client":"Tricon Capital Group","sent":46,"opened":18,"openRate":39.1,"clickRate":8.7},{"client":"Van Metre Companies","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Pahlisch Homes","sent":13,"opened":5,"openRate":38.5,"clickRate":7.7},{"client":"Foremost Pacific Group","sent":13,"opened":5,"openRate":38.5,"clickRate":15.4},{"client":"Touchstone Living","sent":8,"opened":3,"openRate":37.5,"clickRate":0.0},{"client":"Illinois Tool Works","sent":43,"opened":16,"openRate":37.2,"clickRate":4.7},{"client":"Turner Homes, LLC","sent":27,"opened":10,"openRate":37.0,"clickRate":3.7},{"client":"Hayden Homes","sent":30,"opened":11,"openRate":36.7,"clickRate":3.3},{"client":"Van Daele Homes","sent":11,"opened":4,"openRate":36.4,"clickRate":18.2},{"client":"Green Brick Partners","sent":25,"opened":9,"openRate":36.0,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":14,"openRate":35.9,"clickRate":7.7},{"client":"Centric Infrastructure Group","sent":14,"opened":5,"openRate":35.7,"clickRate":0.0},{"client":"NVR Baltimore/DC","sent":111,"opened":39,"openRate":35.1,"clickRate":18.0},{"client":"DRB","sent":46,"opened":16,"openRate":34.8,"clickRate":21.7},{"client":"Sekisui","sent":64,"opened":22,"openRate":34.4,"clickRate":12.5},{"client":"Apollo Global Real Estate Management","sent":85,"opened":29,"openRate":34.1,"clickRate":3.5},{"client":"PulteGroup","sent":224,"opened":75,"openRate":33.5,"clickRate":5.4},{"client":"Land Sale TX","sent":6,"opened":2,"openRate":33.3,"clickRate":33.3},{"client":"Capital Fund 1","sent":21,"opened":7,"openRate":33.3,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":6,"openRate":33.3,"clickRate":11.1},{"client":"Trilantic Capital Partners","sent":12,"opened":4,"openRate":33.3,"clickRate":8.3},{"client":"DR Horton","sent":82,"opened":27,"openRate":32.9,"clickRate":19.5},{"client":"Perry Homes","sent":49,"opened":16,"openRate":32.7,"clickRate":8.2},{"client":"US LBM Holdings","sent":415,"opened":134,"openRate":32.3,"clickRate":4.3},{"client":"K Hovnanian","sent":116,"opened":37,"openRate":31.9,"clickRate":10.3},{"client":"Greystone","sent":19,"opened":6,"openRate":31.6,"clickRate":5.3},{"client":"Caldwell Companies","sent":32,"opened":10,"openRate":31.2,"clickRate":3.1},{"client":"Rockpoint Group, LLC","sent":32,"opened":10,"openRate":31.2,"clickRate":0.0},{"client":"Ashlar Development","sent":16,"opened":5,"openRate":31.2,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":3,"openRate":30.0,"clickRate":0.0},{"client":"Park Square Homes","sent":17,"opened":5,"openRate":29.4,"clickRate":11.8},{"client":"Invitation Homes","sent":76,"opened":22,"openRate":28.9,"clickRate":1.3},{"client":"Arixa Capital","sent":28,"opened":8,"openRate":28.6,"clickRate":0.0},{"client":"Taylor Morrison-Darling Homes - DFW","sent":14,"opened":4,"openRate":28.6,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":6.5},{"client":"MileStone Community Builders","sent":43,"opened":12,"openRate":27.9,"clickRate":9.3},{"client":"Taylor Morrison- Houston","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"Easton Development Company","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"CMC","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Argosy Real Estate","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Meritage Homes","sent":138,"opened":34,"openRate":24.6,"clickRate":11.6},{"client":"MUFG Bank","sent":37,"opened":9,"openRate":24.3,"clickRate":5.4},{"client":"NVR Florida","sent":54,"opened":13,"openRate":24.1,"clickRate":9.3},{"client":"Homes by WestBay","sent":43,"opened":10,"openRate":23.3,"clickRate":0.0},{"client":"Lowes","sent":30,"opened":7,"openRate":23.3,"clickRate":0.0},{"client":"Third Coast Bank","sent":31,"opened":7,"openRate":22.6,"clickRate":9.7},{"client":"Walton Global Holdings","sent":156,"opened":35,"openRate":22.4,"clickRate":3.8},{"client":"Preston Hollow Capital","sent":18,"opened":4,"openRate":22.2,"clickRate":5.6},{"client":"Summit Materials - Central","sent":9,"opened":2,"openRate":22.2,"clickRate":0.0},{"client":"Highland Homes","sent":72,"opened":16,"openRate":22.2,"clickRate":2.8},{"client":"Inland Homebuilding Group","sent":14,"opened":3,"openRate":21.4,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":96,"opened":20,"openRate":20.8,"clickRate":0.0},{"client":"Summit Materials - Texas","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"SiEnergy","sent":36,"opened":7,"openRate":19.4,"clickRate":0.0},{"client":"Replay Destinations","sent":11,"opened":2,"openRate":18.2,"clickRate":0.0},{"client":"Taylor Morrison- Florida Markets","sent":23,"opened":4,"openRate":17.4,"clickRate":8.7},{"client":"Toorak Capital Partners LLC","sent":29,"opened":5,"openRate":17.2,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":58,"opened":10,"openRate":17.2,"clickRate":3.4},{"client":"KB Home","sent":30,"opened":5,"openRate":16.7,"clickRate":16.7},{"client":"Taylor Morrison - All Markets","sent":90,"opened":15,"openRate":16.7,"clickRate":2.2},{"client":"Wilson Homes","sent":12,"opened":2,"openRate":16.7,"clickRate":16.7},{"client":"MainVue","sent":6,"opened":1,"openRate":16.7,"clickRate":0.0},{"client":"GoldenTree Asset Management","sent":20,"opened":3,"openRate":15.0,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":14.3},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Summit Materials - All Markets","sent":24,"opened":3,"openRate":12.5,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":2,"openRate":12.5,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":19,"openRate":11.2,"clickRate":2.4},{"client":"Bank of America Merrill Lynch","sent":39,"opened":4,"openRate":10.3,"clickRate":5.1},{"client":"Challenger Homes","sent":10,"opened":1,"openRate":10.0,"clickRate":0.0},{"client":"California Bank & Trust","sent":62,"opened":5,"openRate":8.1,"clickRate":1.6},{"client":"Greenhawk","sent":14,"opened":1,"openRate":7.1,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":23,"opened":1,"openRate":4.3,"clickRate":0.0},{"client":"Beazer Homes","sent":137,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Summit Materials - East","sent":3,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"The Signorelli Company","sent":17,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Varde Partners","sent":14,"opened":0,"openRate":0.0,"clickRate":0.0}],"apr":[{"client":"National Mortgage Insurance","sent":39,"opened":38,"openRate":97.4,"clickRate":0.0},{"client":"Freehold Capital Management","sent":22,"opened":20,"openRate":90.9,"clickRate":13.6},{"client":"Kodiak Building Partners","sent":27,"opened":24,"openRate":88.9,"clickRate":7.4},{"client":"Teichert","sent":8,"opened":7,"openRate":87.5,"clickRate":0.0},{"client":"Hearthstone","sent":12,"opened":10,"openRate":83.3,"clickRate":0.0},{"client":"Sancerra Management","sent":10,"opened":8,"openRate":80.0,"clickRate":40.0},{"client":"Tim Lewis Communities","sent":5,"opened":4,"openRate":80.0,"clickRate":20.0},{"client":"Alliance Bank of Arizona","sent":60,"opened":48,"openRate":80.0,"clickRate":6.7},{"client":"South Texas Brick & Stone","sent":9,"opened":7,"openRate":77.8,"clickRate":11.1},{"client":"Stock Development","sent":25,"opened":19,"openRate":76.0,"clickRate":4.0},{"client":"DMB Development","sent":12,"opened":9,"openRate":75.0,"clickRate":16.7},{"client":"Villa Homes","sent":12,"opened":9,"openRate":75.0,"clickRate":8.3},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":11.5},{"client":"Kodiak Interiors Group","sent":6,"opened":4,"openRate":66.7,"clickRate":0.0},{"client":"Construction Resources","sent":23,"opened":15,"openRate":65.2,"clickRate":8.7},{"client":"Van Daele Homes","sent":11,"opened":7,"openRate":63.6,"clickRate":45.5},{"client":"Trumark Homes","sent":41,"opened":26,"openRate":63.4,"clickRate":12.2},{"client":"Empire Communities","sent":27,"opened":17,"openRate":63.0,"clickRate":18.5},{"client":"Touchstone Living","sent":8,"opened":5,"openRate":62.5,"clickRate":12.5},{"client":"Gradison Design Build","sent":8,"opened":5,"openRate":62.5,"clickRate":25.0},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":0.0},{"client":"Hines","sent":33,"opened":20,"openRate":60.6,"clickRate":6.1},{"client":"Spring Garden Capital Group","sent":5,"opened":3,"openRate":60.0,"clickRate":40.0},{"client":"Asahi Kasei Homes North America","sent":10,"opened":6,"openRate":60.0,"clickRate":0.0},{"client":"Century Communities","sent":152,"opened":91,"openRate":59.9,"clickRate":9.2},{"client":"NVR Baltimore/DC","sent":111,"opened":66,"openRate":59.5,"clickRate":17.1},{"client":"Hillwood Communities","sent":27,"opened":16,"openRate":59.3,"clickRate":0.0},{"client":"IHP Capital Partners","sent":17,"opened":10,"openRate":58.8,"clickRate":0.0},{"client":"Lone Star Funds","sent":57,"opened":33,"openRate":57.9,"clickRate":0.0},{"client":"HomeFed","sent":14,"opened":8,"openRate":57.1,"clickRate":7.1},{"client":"Shea Homes","sent":133,"opened":75,"openRate":56.4,"clickRate":9.8},{"client":"Caldwell Companies","sent":16,"opened":9,"openRate":56.2,"clickRate":0.0},{"client":"Mungo Companies","sent":9,"opened":5,"openRate":55.6,"clickRate":11.1},{"client":"The New Home Company","sent":57,"opened":31,"openRate":54.4,"clickRate":19.3},{"client":"BPG Acquisitions LLC","sent":181,"opened":98,"openRate":54.1,"clickRate":9.4},{"client":"Tricon Capital Group","sent":45,"opened":24,"openRate":53.3,"clickRate":2.2},{"client":"Greystone","sent":19,"opened":10,"openRate":52.6,"clickRate":15.8},{"client":"Smith Douglas Homes","sent":40,"opened":21,"openRate":52.5,"clickRate":10.0},{"client":"General Shale Brick Inc.","sent":21,"opened":11,"openRate":52.4,"clickRate":19.0},{"client":"SimplyHome","sent":23,"opened":12,"openRate":52.2,"clickRate":0.0},{"client":"MainVue","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Trilantic Capital Partners","sent":12,"opened":6,"openRate":50.0,"clickRate":0.0},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"GTIS Partners","sent":28,"opened":14,"openRate":50.0,"clickRate":0.0},{"client":"Edge Homes","sent":6,"opened":3,"openRate":50.0,"clickRate":16.7},{"client":"Howard Hughes","sent":26,"opened":13,"openRate":50.0,"clickRate":7.7},{"client":"Illinois Tool Works","sent":44,"opened":22,"openRate":50.0,"clickRate":4.5},{"client":"Rockpoint Group, LLC","sent":32,"opened":16,"openRate":50.0,"clickRate":3.1},{"client":"Rancho Mission Viejo","sent":14,"opened":7,"openRate":50.0,"clickRate":7.1},{"client":"Clayton Properties Group","sent":45,"opened":22,"openRate":48.9,"clickRate":24.4},{"client":"Crown Community Development","sent":21,"opened":10,"openRate":47.6,"clickRate":19.0},{"client":"Sumitomo Forestry America","sent":72,"opened":34,"openRate":47.2,"clickRate":15.3},{"client":"Cardel Group of Companies","sent":17,"opened":8,"openRate":47.1,"clickRate":17.6},{"client":"KTGY","sent":43,"opened":20,"openRate":46.5,"clickRate":4.7},{"client":"Mattamy Homes","sent":201,"opened":92,"openRate":45.8,"clickRate":13.9},{"client":"Green Brick Partners","sent":22,"opened":10,"openRate":45.5,"clickRate":9.1},{"client":"TRI Pointe Homes","sent":228,"opened":102,"openRate":44.7,"clickRate":9.6},{"client":"Centric Fiber","sent":9,"opened":4,"openRate":44.4,"clickRate":0.0},{"client":"Trez Capital","sent":55,"opened":24,"openRate":43.6,"clickRate":9.1},{"client":"Kitson&Partners","sent":21,"opened":9,"openRate":42.9,"clickRate":0.0},{"client":"LGI Homes","sent":26,"opened":11,"openRate":42.3,"clickRate":0.0},{"client":"Sekisui","sent":78,"opened":32,"openRate":41.0,"clickRate":10.3},{"client":"Apollo Global Real Estate Management","sent":82,"opened":33,"openRate":40.2,"clickRate":1.2},{"client":"KB Home","sent":15,"opened":6,"openRate":40.0,"clickRate":40.0},{"client":"Pahlisch Homes","sent":15,"opened":6,"openRate":40.0,"clickRate":6.7},{"client":"Board of Advisors","sent":10,"opened":4,"openRate":40.0,"clickRate":0.0},{"client":"PulteGroup","sent":222,"opened":87,"openRate":39.2,"clickRate":10.8},{"client":"Pacific Lifestyle Homes","sent":31,"opened":12,"openRate":38.7,"clickRate":0.0},{"client":"Capital Fund 1","sent":21,"opened":8,"openRate":38.1,"clickRate":0.0},{"client":"Toorak Capital Partners LLC","sent":29,"opened":11,"openRate":37.9,"clickRate":3.4},{"client":"Angelo Gordon & Co","sent":22,"opened":8,"openRate":36.4,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":14,"opened":5,"openRate":35.7,"clickRate":0.0},{"client":"Van Metre Companies","sent":28,"opened":10,"openRate":35.7,"clickRate":3.6},{"client":"Crescent Communities","sent":17,"opened":6,"openRate":35.3,"clickRate":0.0},{"client":"K Hovnanian","sent":114,"opened":38,"openRate":33.3,"clickRate":9.6},{"client":"Hayden Homes","sent":30,"opened":10,"openRate":33.3,"clickRate":6.7},{"client":"GoldenTree Asset Management","sent":12,"opened":4,"openRate":33.3,"clickRate":8.3},{"client":"Argosy Real Estate","sent":24,"opened":8,"openRate":33.3,"clickRate":0.0},{"client":"Invitation Homes","sent":89,"opened":28,"openRate":31.5,"clickRate":3.4},{"client":"Pacific Communities Builder","sent":16,"opened":5,"openRate":31.2,"clickRate":0.0},{"client":"Centric Infrastructure Group","sent":13,"opened":4,"openRate":30.8,"clickRate":7.7},{"client":"Park Square Homes","sent":17,"opened":5,"openRate":29.4,"clickRate":11.8},{"client":"MASCO Corporation","sent":104,"opened":30,"openRate":28.8,"clickRate":1.0},{"client":"Arixa Capital","sent":28,"opened":8,"openRate":28.6,"clickRate":0.0},{"client":"Southern Land Company","sent":46,"opened":13,"openRate":28.3,"clickRate":8.7},{"client":"Preston Hollow Capital","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":5,"openRate":27.8,"clickRate":0.0},{"client":"DR Horton","sent":83,"opened":23,"openRate":27.7,"clickRate":14.5},{"client":"Boulder Creek Neighborhoods","sent":11,"opened":3,"openRate":27.3,"clickRate":18.2},{"client":"DRB","sent":47,"opened":12,"openRate":25.5,"clickRate":10.6},{"client":"Meritage Homes","sent":139,"opened":35,"openRate":25.2,"clickRate":11.5},{"client":"LWR Communities","sent":4,"opened":1,"openRate":25.0,"clickRate":25.0},{"client":"Luxor Capital Group LP","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"CMC","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Easton Development Company","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"Taylor Morrison- Houston","sent":24,"opened":6,"openRate":25.0,"clickRate":0.0},{"client":"Perry Homes","sent":49,"opened":12,"openRate":24.5,"clickRate":6.1},{"client":"The Signorelli Company","sent":17,"opened":4,"openRate":23.5,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":102,"opened":24,"openRate":23.5,"clickRate":1.0},{"client":"The Sterling Group","sent":13,"opened":3,"openRate":23.1,"clickRate":0.0},{"client":"Texas Capital Bank","sent":22,"opened":5,"openRate":22.7,"clickRate":0.0},{"client":"Varde Partners","sent":14,"opened":3,"openRate":21.4,"clickRate":7.1},{"client":"Turner Homes, LLC","sent":28,"opened":6,"openRate":21.4,"clickRate":3.6},{"client":"Kennedy Lewis Investment Management","sent":38,"opened":8,"openRate":21.1,"clickRate":5.3},{"client":"NVR Florida","sent":54,"opened":11,"openRate":20.4,"clickRate":3.7},{"client":"Taylor Morrison - All Markets","sent":89,"opened":18,"openRate":20.2,"clickRate":4.5},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Toll Brothers","sent":297,"opened":59,"openRate":19.9,"clickRate":8.4},{"client":"Lowes","sent":31,"opened":6,"openRate":19.4,"clickRate":0.0},{"client":"California Bank & Trust","sent":31,"opened":6,"openRate":19.4,"clickRate":9.7},{"client":"Replay Destinations","sent":11,"opened":2,"openRate":18.2,"clickRate":18.2},{"client":"Taylor Morrison- Florida Markets","sent":22,"opened":4,"openRate":18.2,"clickRate":9.1},{"client":"MUFG Bank","sent":36,"opened":6,"openRate":16.7,"clickRate":0.0},{"client":"Genesis Capital","sent":170,"opened":27,"openRate":15.9,"clickRate":4.7},{"client":"Greenhawk","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":14.3},{"client":"RAM Real Estate Capital","sent":8,"opened":1,"openRate":12.5,"clickRate":12.5},{"client":"SR Homes","sent":8,"opened":1,"openRate":12.5,"clickRate":0.0},{"client":"Bank of America Merrill Lynch","sent":19,"opened":2,"openRate":10.5,"clickRate":0.0},{"client":"Beazer Homes","sent":139,"opened":5,"openRate":3.6,"clickRate":2.9},{"client":"Challenger Homes","sent":5,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0},{"client":"M/I Homes","sent":4,"opened":0,"openRate":0.0,"clickRate":0.0}],"jun":[{"client": "Zillow", "sent": 42, "opened": 40, "openRate": 95.2, "clickRate": 0.0}, {"client": "National Mortgage Insurance", "sent": 38, "opened": 36, "openRate": 94.7, "clickRate": 5.3}, {"client": "Freehold Capital Management", "sent": 22, "opened": 20, "openRate": 90.9, "clickRate": 0.0}, {"client": "Intracorp - OC/LA", "sent": 14, "opened": 12, "openRate": 85.7, "clickRate": 7.1}, {"client": "Intracorp - Austin", "sent": 14, "opened": 12, "openRate": 85.7, "clickRate": 7.1}, {"client": "Villa Homes", "sent": 12, "opened": 10, "openRate": 83.3, "clickRate": 8.3}, {"client": "Intracorp - Seattle", "sent": 9, "opened": 7, "openRate": 77.8, "clickRate": 22.2}, {"client": "Johnson Development Corp.", "sent": 59, "opened": 45, "openRate": 76.3, "clickRate": 1.7}, {"client": "DMB Development", "sent": 11, "opened": 8, "openRate": 72.7, "clickRate": 27.3}, {"client": "Camelot Homes", "sent": 18, "opened": 13, "openRate": 72.2, "clickRate": 0.0}, {"client": "HomeFed", "sent": 14, "opened": 10, "openRate": 71.4, "clickRate": 0.0}, {"client": "Wan Bridge", "sent": 30, "opened": 21, "openRate": 70.0, "clickRate": 3.3}, {"client": "AG WIP Asset Management", "sent": 26, "opened": 18, "openRate": 69.2, "clickRate": 15.4}, {"client": "Chartwell Escrow", "sent": 12, "opened": 8, "openRate": 66.7, "clickRate": 8.3}, {"client": "Hearthstone", "sent": 12, "opened": 8, "openRate": 66.7, "clickRate": 0.0}, {"client": "Edge Homes", "sent": 6, "opened": 4, "openRate": 66.7, "clickRate": 0.0}, {"client": "Wisenbaker Builder Services", "sent": 31, "opened": 20, "openRate": 64.5, "clickRate": 3.3}, {"client": "Stock Development", "sent": 24, "opened": 15, "openRate": 62.5, "clickRate": 0.0}, {"client": "Gradison Design Build", "sent": 8, "opened": 5, "openRate": 62.5, "clickRate": 25.0}, {"client": "Fundrise", "sent": 21, "opened": 13, "openRate": 61.9, "clickRate": 4.8}, {"client": "Rancho Mission Viejo", "sent": 13, "opened": 8, "openRate": 61.5, "clickRate": 0.0}, {"client": "IHP Capital Partners", "sent": 18, "opened": 11, "openRate": 61.1, "clickRate": 0.0}, {"client": "Tim Lewis Communities", "sent": 5, "opened": 3, "openRate": 60.0, "clickRate": 0.0}, {"client": "Sancerra Management", "sent": 10, "opened": 6, "openRate": 60.0, "clickRate": 10.0}, {"client": "LGI Homes", "sent": 27, "opened": 16, "openRate": 59.3, "clickRate": 3.7}, {"client": "Hillwood Communities", "sent": 27, "opened": 16, "openRate": 59.3, "clickRate": 7.4}, {"client": "Cardel Group of Companies", "sent": 17, "opened": 10, "openRate": 58.8, "clickRate": 11.8}, {"client": "RESICAP", "sent": 7, "opened": 4, "openRate": 57.1, "clickRate": 0.0}, {"client": "Construction Resources", "sent": 23, "opened": 13, "openRate": 56.5, "clickRate": 8.7}, {"client": "Empire Communities", "sent": 27, "opened": 15, "openRate": 55.6, "clickRate": 3.7}, {"client": "Weekley Group of Companies", "sent": 140, "opened": 77, "openRate": 55.0, "clickRate": 7.1}, {"client": "Howard Hughes", "sent": 26, "opened": 14, "openRate": 53.8, "clickRate": 11.5}, {"client": "Hines", "sent": 32, "opened": 17, "openRate": 53.1, "clickRate": 0.0}, {"client": "Century Communities", "sent": 152, "opened": 80, "openRate": 52.6, "clickRate": 7.2}, {"client": "SimplyHome", "sent": 25, "opened": 13, "openRate": 52.0, "clickRate": 0.0}, {"client": "Lone Star Funds", "sent": 57, "opened": 29, "openRate": 50.9, "clickRate": 0.0}, {"client": "Shea Homes", "sent": 134, "opened": 68, "openRate": 50.7, "clickRate": 7.5}, {"client": "MileStone Community Builders", "sent": 22, "opened": 11, "openRate": 50.0, "clickRate": 4.5}, {"client": "Caldwell Companies", "sent": 16, "opened": 8, "openRate": 50.0, "clickRate": 6.2}, {"client": "Tricon Capital Group", "sent": 44, "opened": 22, "openRate": 50.0, "clickRate": 2.3}, {"client": "Teichert", "sent": 8, "opened": 4, "openRate": 50.0, "clickRate": 12.5}, {"client": "Kodiak Interiors Group", "sent": 6, "opened": 3, "openRate": 50.0, "clickRate": 0.0}, {"client": "KB Home", "sent": 18, "opened": 9, "openRate": 50.0, "clickRate": 27.8}, {"client": "Easton Development Company", "sent": 4, "opened": 2, "openRate": 50.0, "clickRate": 25.0}, {"client": "BPG Acquisitions LLC", "sent": 194, "opened": 97, "openRate": 50.0, "clickRate": 7.3}, {"client": "KTGY", "sent": 43, "opened": 21, "openRate": 48.8, "clickRate": 4.7}, {"client": "Smith Douglas Homes", "sent": 39, "opened": 19, "openRate": 48.7, "clickRate": 10.3}, {"client": "Hayden Homes", "sent": 27, "opened": 13, "openRate": 48.1, "clickRate": 7.4}, {"client": "Park Square Homes", "sent": 17, "opened": 8, "openRate": 47.1, "clickRate": 0.0}, {"client": "Crescent Communities", "sent": 17, "opened": 8, "openRate": 47.1, "clickRate": 5.9}, {"client": "Mattamy Homes", "sent": 100, "opened": 47, "openRate": 47.0, "clickRate": 15.0}, {"client": "Trumark Homes", "sent": 43, "opened": 20, "openRate": 46.5, "clickRate": 4.7}, {"client": "Kitson&Partners", "sent": 22, "opened": 10, "openRate": 45.5, "clickRate": 9.1}, {"client": "Green Brick Partners", "sent": 22, "opened": 10, "openRate": 45.5, "clickRate": 4.5}, {"client": "Pacific Lifestyle Homes", "sent": 31, "opened": 14, "openRate": 45.2, "clickRate": 0.0}, {"client": "GTIS Partners", "sent": 29, "opened": 13, "openRate": 44.8, "clickRate": 0.0}, {"client": "Board of Advisors", "sent": 9, "opened": 4, "openRate": 44.4, "clickRate": 0.0}, {"client": "RAM Real Estate Capital", "sent": 9, "opened": 4, "openRate": 44.4, "clickRate": 11.1}, {"client": "Illinois Tool Works", "sent": 43, "opened": 19, "openRate": 44.2, "clickRate": 0.0}, {"client": "TRI Pointe Homes", "sent": 228, "opened": 98, "openRate": 43.0, "clickRate": 11.4}, {"client": "Inland Homebuilding Group", "sent": 7, "opened": 3, "openRate": 42.9, "clickRate": 0.0}, {"client": "Kodiak Building Partners", "sent": 28, "opened": 12, "openRate": 42.9, "clickRate": 7.1}, {"client": "Taylor Morrison - All Markets", "sent": 87, "opened": 35, "openRate": 40.2, "clickRate": 9.2}, {"client": "Spring Garden Capital Group", "sent": 5, "opened": 2, "openRate": 40.0, "clickRate": 20.0}, {"client": "Sekisui", "sent": 76, "opened": 30, "openRate": 39.5, "clickRate": 14.5}, {"client": "General Shale Brick Inc.", "sent": 23, "opened": 9, "openRate": 39.1, "clickRate": 8.7}, {"client": "Integral Communities", "sent": 34, "opened": 13, "openRate": 38.2, "clickRate": 0.0}, {"client": "Apollo Global Real Estate Management", "sent": 84, "opened": 32, "openRate": 38.1, "clickRate": 1.2}, {"client": "Touchstone Living", "sent": 8, "opened": 3, "openRate": 37.5, "clickRate": 12.5}, {"client": "Ashlar Development", "sent": 8, "opened": 3, "openRate": 37.5, "clickRate": 12.5}, {"client": "SR Homes", "sent": 8, "opened": 3, "openRate": 37.5, "clickRate": 0.0}, {"client": "Centric Fiber", "sent": 8, "opened": 3, "openRate": 37.5, "clickRate": 12.5}, {"client": "Argosy Real Estate", "sent": 24, "opened": 9, "openRate": 37.5, "clickRate": 0.0}, {"client": "Angelo Gordon & Co", "sent": 24, "opened": 9, "openRate": 37.5, "clickRate": 0.0}, {"client": "Sumitomo Forestry America", "sent": 78, "opened": 29, "openRate": 37.2, "clickRate": 6.4}, {"client": "Van Daele Homes", "sent": 11, "opened": 4, "openRate": 36.4, "clickRate": 18.2}, {"client": "Boulder Creek Neighborhoods", "sent": 11, "opened": 4, "openRate": 36.4, "clickRate": 0.0}, {"client": "Foremost Pacific Group", "sent": 14, "opened": 5, "openRate": 35.7, "clickRate": 14.3}, {"client": "The New Home Company", "sent": 62, "opened": 22, "openRate": 35.5, "clickRate": 11.3}, {"client": "Van Metre Companies", "sent": 29, "opened": 10, "openRate": 34.5, "clickRate": 10.3}, {"client": "PulteGroup", "sent": 233, "opened": 80, "openRate": 34.3, "clickRate": 10.7}, {"client": "Clayton Properties Group", "sent": 74, "opened": 19, "openRate": 25.7, "clickRate": 4.1}, {"client": "CMC", "sent": 9, "opened": 2, "openRate": 22.2, "clickRate": 11.1}, {"client": "Shelter Asset Management", "sent": 9, "opened": 3, "openRate": 33.3, "clickRate": 11.1}, {"client": "DMB Associates", "sent": 6, "opened": 2, "openRate": 33.3, "clickRate": 16.7}, {"client": "Oakpointe", "sent": 6, "opened": 2, "openRate": 33.3, "clickRate": 0.0}, {"client": "Mungo Companies", "sent": 9, "opened": 3, "openRate": 33.3, "clickRate": 0.0}, {"client": "Invitation Homes", "sent": 89, "opened": 29, "openRate": 32.6, "clickRate": 1.1}, {"client": "Greystone", "sent": 19, "opened": 6, "openRate": 31.6, "clickRate": 5.3}, {"client": "Trez Capital", "sent": 54, "opened": 17, "openRate": 31.5, "clickRate": 7.5}, {"client": "Pahlisch Homes", "sent": 16, "opened": 5, "openRate": 31.2, "clickRate": 12.5}, {"client": "Capital Fund 1", "sent": 23, "opened": 7, "openRate": 30.4, "clickRate": 8.7}, {"client": "DRB", "sent": 47, "opened": 14, "openRate": 29.8, "clickRate": 6.4}, {"client": "Arixa Capital", "sent": 27, "opened": 8, "openRate": 29.6, "clickRate": 3.7}, {"client": "Taylor Morrison- Houston", "sent": 24, "opened": 7, "openRate": 29.2, "clickRate": 0.0}, {"client": "Rockpoint Group, LLC", "sent": 31, "opened": 9, "openRate": 29.0, "clickRate": 0.0}, {"client": "Taylor Morrison-Darling Homes - DFW", "sent": 7, "opened": 2, "openRate": 28.6, "clickRate": 0.0}, {"client": "Taylor Morrison- Florida Markets", "sent": 21, "opened": 6, "openRate": 28.6, "clickRate": 9.5}, {"client": "Renasant Bank", "sent": 7, "opened": 2, "openRate": 28.6, "clickRate": 14.3}, {"client": "Greenhawk", "sent": 7, "opened": 2, "openRate": 28.6, "clickRate": 0.0}, {"client": "Gamut Capital Management", "sent": 7, "opened": 2, "openRate": 28.6, "clickRate": 0.0}, {"client": "NVR Baltimore/DC", "sent": 110, "opened": 31, "openRate": 28.2, "clickRate": 11.8}, {"client": "MASCO Corporation", "sent": 54, "opened": 15, "openRate": 27.8, "clickRate": 0.0}, {"client": "BB Living Residential", "sent": 18, "opened": 5, "openRate": 27.8, "clickRate": 0.0}, {"client": "US LBM Holdings", "sent": 204, "opened": 56, "openRate": 27.5, "clickRate": 3.5}, {"client": "K Hovnanian", "sent": 110, "opened": 29, "openRate": 26.4, "clickRate": 5.5}, {"client": "Bank of America Merrill Lynch", "sent": 19, "opened": 5, "openRate": 26.3, "clickRate": 5.3}, {"client": "Southern Land Company", "sent": 42, "opened": 11, "openRate": 26.2, "clickRate": 2.4}, {"client": "Kennedy Lewis Investment Management", "sent": 39, "opened": 6, "openRate": 15.4, "clickRate": 0.0}, {"client": "Land Sale TX", "sent": 4, "opened": 1, "openRate": 25.0, "clickRate": 0.0}, {"client": "The Signorelli Company", "sent": 16, "opened": 4, "openRate": 25.0, "clickRate": 6.2}, {"client": "Highland Homes", "sent": 36, "opened": 9, "openRate": 25.0, "clickRate": 2.8}, {"client": "Perry Homes", "sent": 64, "opened": 16, "openRate": 25.0, "clickRate": 6.2}, {"client": "LWR Communities", "sent": 4, "opened": 1, "openRate": 25.0, "clickRate": 25.0}, {"client": "GoldenTree Asset Management", "sent": 12, "opened": 3, "openRate": 25.0, "clickRate": 8.3}, {"client": "Third Coast Bank", "sent": 17, "opened": 4, "openRate": 23.5, "clickRate": 11.8}, {"client": "Trilantic Capital Partners", "sent": 13, "opened": 3, "openRate": 23.1, "clickRate": 7.7}, {"client": "Homes by WestBay", "sent": 22, "opened": 5, "openRate": 22.7, "clickRate": 0.0}, {"client": "SiEnergy", "sent": 18, "opened": 4, "openRate": 22.2, "clickRate": 0.0}, {"client": "NVR Florida", "sent": 54, "opened": 12, "openRate": 22.2, "clickRate": 5.6}, {"client": "Luxor Capital Group LP", "sent": 9, "opened": 2, "openRate": 22.2, "clickRate": 0.0}, {"client": "Turner Homes, LLC", "sent": 28, "opened": 6, "openRate": 21.4, "clickRate": 3.6}, {"client": "MUFG Bank", "sent": 34, "opened": 7, "openRate": 20.6, "clickRate": 0.0}, {"client": "Lowe's", "sent": 39, "opened": 8, "openRate": 20.5, "clickRate": 0.0}, {"client": "Westbrook Partners", "sent": 5, "opened": 1, "openRate": 20.0, "clickRate": 0.0}, {"client": "Beach Point Capital", "sent": 10, "opened": 2, "openRate": 20.0, "clickRate": 0.0}, {"client": "DR Horton", "sent": 78, "opened": 15, "openRate": 19.2, "clickRate": 5.1}, {"client": "Ascent Developer Solutions", "sent": 141, "opened": 26, "openRate": 18.4, "clickRate": 0.7}, {"client": "Replay Destinations", "sent": 11, "opened": 2, "openRate": 18.2, "clickRate": 0.0}, {"client": "Walton Global Holdings", "sent": 79, "opened": 14, "openRate": 17.7, "clickRate": 5.1}, {"client": "Stone Martin Builders", "sent": 6, "opened": 1, "openRate": 16.7, "clickRate": 0.0}, {"client": "Preston Hollow Capital", "sent": 18, "opened": 3, "openRate": 16.7, "clickRate": 0.0}, {"client": "MainVue", "sent": 6, "opened": 1, "openRate": 16.7, "clickRate": 0.0}, {"client": "Genesis Capital", "sent": 176, "opened": 18, "openRate": 10.2, "clickRate": 1.1}, {"client": "Toll Brothers", "sent": 302, "opened": 49, "openRate": 16.2, "clickRate": 7.3}, {"client": "The Sterling Group", "sent": 13, "opened": 2, "openRate": 15.4, "clickRate": 0.0}, {"client": "Meritage Homes", "sent": 137, "opened": 21, "openRate": 15.3, "clickRate": 8.8}, {"client": "Alliance Bank of Arizona", "sent": 61, "opened": 9, "openRate": 14.8, "clickRate": 1.6}, {"client": "Varde Partners", "sent": 14, "opened": 2, "openRate": 14.3, "clickRate": 0.0}, {"client": "Toorak Capital Partners LLC", "sent": 29, "opened": 4, "openRate": 13.8, "clickRate": 0.0}, {"client": "Texas Capital Bank", "sent": 22, "opened": 3, "openRate": 13.6, "clickRate": 0.0}, {"client": "California Bank & Trust", "sent": 32, "opened": 4, "openRate": 12.5, "clickRate": 3.1}, {"client": "Asahi Kasei Homes North America", "sent": 8, "opened": 1, "openRate": 12.5, "clickRate": 12.5}, {"client": "Pacific Communities Builder", "sent": 16, "opened": 1, "openRate": 6.2, "clickRate": 0.0}, {"client": "Beazer Homes", "sent": 140, "opened": 1, "openRate": 0.7, "clickRate": 2.1}, {"client": "Wilson Homes", "sent": 4, "opened": 0, "openRate": 0.0, "clickRate": 0.0}, {"client": "M/I Homes", "sent": 4, "opened": 0, "openRate": 0.0, "clickRate": 0.0}, {"client": "Challenger Homes", "sent": 5, "opened": 0, "openRate": 0.0, "clickRate": 0.0}, {"client": "Blackstone Alternative Credit Advisors LP", "sent": 4, "opened": 0, "openRate": 0.0, "clickRate": 0.0}],
+"may":[{"client":"Zillow","sent":42,"opened":41,"openRate":97.6,"clickRate":2.4},{"client":"National Mortgage Insurance","sent":39,"opened":38,"openRate":97.4,"clickRate":2.6},{"client":"Freehold Capital Management","sent":22,"opened":21,"openRate":95.5,"clickRate":4.5},{"client":"Intracorp - Austin","sent":14,"opened":13,"openRate":92.9,"clickRate":0.0},{"client":"Intracorp - OC/LA","sent":14,"opened":13,"openRate":92.9,"clickRate":7.1},{"client":"Hearthstone","sent":12,"opened":11,"openRate":91.7,"clickRate":0.0},{"client":"Intracorp - Seattle","sent":10,"opened":9,"openRate":90.0,"clickRate":10.0},{"client":"DMB Development","sent":12,"opened":10,"openRate":83.3,"clickRate":16.7},{"client":"Kodiak Interiors Group","sent":6,"opened":5,"openRate":83.3,"clickRate":0.0},{"client":"Chartwell Escrow","sent":12,"opened":10,"openRate":83.3,"clickRate":8.3},{"client":"HomeFed","sent":14,"opened":11,"openRate":78.6,"clickRate":0.0},{"client":"RAM Real Estate Capital","sent":9,"opened":7,"openRate":77.8,"clickRate":33.3},{"client":"Rancho Mission Viejo","sent":13,"opened":10,"openRate":76.9,"clickRate":0.0},{"client":"Wan Bridge","sent":30,"opened":23,"openRate":76.7,"clickRate":6.7},{"client":"Ashlar Development","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Villa Homes","sent":12,"opened":9,"openRate":75.0,"clickRate":8.3},{"client":"Gradison Design Build","sent":8,"opened":6,"openRate":75.0,"clickRate":12.5},{"client":"Camelot Homes","sent":18,"opened":13,"openRate":72.2,"clickRate":0.0},{"client":"IHP Capital Partners","sent":17,"opened":12,"openRate":70.6,"clickRate":0.0},{"client":"Park Square Homes","sent":17,"opened":12,"openRate":70.6,"clickRate":11.8},{"client":"Sancerra Management","sent":10,"opened":7,"openRate":70.0,"clickRate":30.0},{"client":"AG WIP Asset Management","sent":26,"opened":18,"openRate":69.2,"clickRate":19.2},{"client":"Caldwell Companies","sent":16,"opened":11,"openRate":68.8,"clickRate":25.0},{"client":"Land Sale TX","sent":3,"opened":2,"openRate":66.7,"clickRate":33.3},{"client":"Edge Homes","sent":6,"opened":4,"openRate":66.7,"clickRate":0.0},{"client":"Stock Development","sent":24,"opened":16,"openRate":66.7,"clickRate":0.0},{"client":"Trumark Homes","sent":42,"opened":27,"openRate":64.3,"clickRate":4.8},{"client":"Van Daele Homes","sent":11,"opened":7,"openRate":63.6,"clickRate":18.2},{"client":"Weekley Group of Companies","sent":137,"opened":87,"openRate":63.5,"clickRate":9.5},{"client":"Touchstone Living","sent":8,"opened":5,"openRate":62.5,"clickRate":0.0},{"client":"Teichert","sent":8,"opened":5,"openRate":62.5,"clickRate":25.0},{"client":"Fundrise","sent":21,"opened":13,"openRate":61.9,"clickRate":4.8},{"client":"Wisenbaker Builder Services","sent":31,"opened":19,"openRate":61.3,"clickRate":3.2},{"client":"Johnson Development Corp.","sent":59,"opened":36,"openRate":61.0,"clickRate":3.4},{"client":"Construction Resources","sent":23,"opened":14,"openRate":60.9,"clickRate":13.0},{"client":"Tim Lewis Communities","sent":5,"opened":3,"openRate":60.0,"clickRate":0.0},{"client":"Green Brick Partners","sent":22,"opened":13,"openRate":59.1,"clickRate":13.6},{"client":"RESICAP","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"DMB Associates","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"Gamut Capital Management","sent":7,"opened":4,"openRate":57.1,"clickRate":0.0},{"client":"Tricon Capital Group","sent":44,"opened":25,"openRate":56.8,"clickRate":9.1},{"client":"General Shale Brick Inc.","sent":23,"opened":13,"openRate":56.5,"clickRate":17.4},{"client":"SimplyHome","sent":25,"opened":14,"openRate":56.0,"clickRate":0.0},{"client":"Integral Communities","sent":34,"opened":19,"openRate":55.9,"clickRate":5.9},{"client":"BPG Acquisitions LLC","sent":181,"opened":101,"openRate":55.8,"clickRate":9.4},{"client":"Shea Homes","sent":133,"opened":74,"openRate":55.6,"clickRate":9.0},{"client":"Hillwood Communities","sent":27,"opened":15,"openRate":55.6,"clickRate":3.7},{"client":"Luxor Capital Group LP","sent":9,"opened":5,"openRate":55.6,"clickRate":0.0},{"client":"Empire Communities","sent":27,"opened":15,"openRate":55.6,"clickRate":7.4},{"client":"Smith Douglas Homes","sent":40,"opened":22,"openRate":55.0,"clickRate":10.0},{"client":"Crown Community Development","sent":22,"opened":12,"openRate":54.5,"clickRate":0.0},{"client":"Lone Star Funds","sent":57,"opened":31,"openRate":54.4,"clickRate":0.0},{"client":"KB Home","sent":17,"opened":9,"openRate":52.9,"clickRate":17.6},{"client":"Century Communities","sent":152,"opened":80,"openRate":52.6,"clickRate":5.3},{"client":"Taylor Morrison- Florida Markets","sent":21,"opened":11,"openRate":52.4,"clickRate":14.3},{"client":"GTIS Partners","sent":29,"opened":15,"openRate":51.7,"clickRate":3.4},{"client":"Stone Martin Builders","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Blackstone Alternative Credit Advisors LP","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"BB Living Residential","sent":18,"opened":9,"openRate":50.0,"clickRate":5.6},{"client":"Board of Advisors","sent":10,"opened":5,"openRate":50.0,"clickRate":0.0},{"client":"Asahi Kasei Homes North America","sent":8,"opened":4,"openRate":50.0,"clickRate":0.0},{"client":"Foremost Pacific Group","sent":14,"opened":7,"openRate":50.0,"clickRate":7.1},{"client":"LWR Communities","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"Easton Development Company","sent":4,"opened":2,"openRate":50.0,"clickRate":0.0},{"client":"Hines","sent":32,"opened":16,"openRate":50.0,"clickRate":3.1},{"client":"Oakpointe","sent":6,"opened":3,"openRate":50.0,"clickRate":0.0},{"client":"Howard Hughes","sent":26,"opened":13,"openRate":50.0,"clickRate":3.8},{"client":"KTGY","sent":43,"opened":21,"openRate":48.8,"clickRate":4.7},{"client":"Hayden Homes","sent":27,"opened":13,"openRate":48.1,"clickRate":11.1},{"client":"Crescent Communities","sent":17,"opened":8,"openRate":47.1,"clickRate":0.0},{"client":"Cardel Group of Companies","sent":17,"opened":8,"openRate":47.1,"clickRate":0.0},{"client":"Rockpoint Group, LLC","sent":32,"opened":15,"openRate":46.9,"clickRate":0.0},{"client":"The Sterling Group","sent":13,"opened":6,"openRate":46.2,"clickRate":0.0},{"client":"MileStone Community Builders","sent":22,"opened":10,"openRate":45.5,"clickRate":4.5},{"client":"Pacific Lifestyle Homes","sent":31,"opened":14,"openRate":45.2,"clickRate":0.0},{"client":"Shelter Asset Management","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"LGI Homes","sent":27,"opened":12,"openRate":44.4,"clickRate":3.7},{"client":"Mungo Companies","sent":9,"opened":4,"openRate":44.4,"clickRate":11.1},{"client":"TRI Pointe Homes","sent":228,"opened":99,"openRate":43.4,"clickRate":7.5},{"client":"Trez Capital","sent":54,"opened":23,"openRate":42.6,"clickRate":5.6},{"client":"The New Home Company","sent":61,"opened":26,"openRate":42.6,"clickRate":11.5},{"client":"Sumitomo Forestry America","sent":78,"opened":33,"openRate":42.3,"clickRate":10.3},{"client":"Illinois Tool Works","sent":43,"opened":18,"openRate":41.9,"clickRate":4.7},{"client":"Spring Garden Capital Group","sent":5,"opened":2,"openRate":40.0,"clickRate":20.0},{"client":"Westbrook Partners","sent":5,"opened":2,"openRate":40.0,"clickRate":0.0},{"client":"Preston Hollow Capital","sent":18,"opened":7,"openRate":38.9,"clickRate":5.6},{"client":"Apollo Global Real Estate Management","sent":83,"opened":32,"openRate":38.6,"clickRate":1.2},{"client":"Trilantic Capital Partners","sent":13,"opened":5,"openRate":38.5,"clickRate":0.0},{"client":"Kitson&Partners","sent":21,"opened":8,"openRate":38.1,"clickRate":0.0},{"client":"Taylor Morrison - All Markets","sent":87,"opened":33,"openRate":37.9,"clickRate":12.6},{"client":"Van Metre Companies","sent":29,"opened":11,"openRate":37.9,"clickRate":3.4},{"client":"Sekisui","sent":77,"opened":29,"openRate":37.7,"clickRate":10.4},{"client":"Centric Fiber","sent":8,"opened":3,"openRate":37.5,"clickRate":25.0},{"client":"Pahlisch Homes","sent":16,"opened":6,"openRate":37.5,"clickRate":0.0},{"client":"Greystone","sent":19,"opened":7,"openRate":36.8,"clickRate":5.3},{"client":"Boulder Creek Neighborhoods","sent":11,"opened":4,"openRate":36.4,"clickRate":9.1},{"client":"Replay Destinations","sent":11,"opened":4,"openRate":36.4,"clickRate":0.0},{"client":"DRB","sent":47,"opened":17,"openRate":36.2,"clickRate":12.8},{"client":"Turner Homes, LLC","sent":28,"opened":10,"openRate":35.7,"clickRate":0.0},{"client":"The Signorelli Company","sent":17,"opened":6,"openRate":35.3,"clickRate":5.9},{"client":"Capital Fund 1","sent":23,"opened":8,"openRate":34.8,"clickRate":8.7},{"client":"MainVue","sent":6,"opened":2,"openRate":33.3,"clickRate":0.0},{"client":"CMC","sent":9,"opened":3,"openRate":33.3,"clickRate":22.2},{"client":"Arixa Capital","sent":27,"opened":9,"openRate":33.3,"clickRate":3.7},{"client":"GoldenTree Asset Management","sent":12,"opened":4,"openRate":33.3,"clickRate":0.0},{"client":"Southern Land Company","sent":43,"opened":14,"openRate":32.6,"clickRate":2.3},{"client":"Invitation Homes","sent":86,"opened":28,"openRate":32.6,"clickRate":2.3},{"client":"Homes by WestBay","sent":22,"opened":7,"openRate":31.8,"clickRate":0.0},{"client":"K Hovnanian","sent":114,"opened":35,"openRate":30.7,"clickRate":7.0},{"client":"Highland Homes","sent":36,"opened":11,"openRate":30.6,"clickRate":2.8},{"client":"US LBM Holdings","sent":206,"opened":63,"openRate":30.6,"clickRate":1.5},{"client":"Kodiak Building Partners","sent":27,"opened":8,"openRate":29.6,"clickRate":7.4},{"client":"Third Coast Bank","sent":17,"opened":5,"openRate":29.4,"clickRate":5.9},{"client":"Taylor Morrison- Houston","sent":24,"opened":7,"openRate":29.2,"clickRate":8.3},{"client":"Argosy Real Estate","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"Angelo Gordon & Co","sent":24,"opened":7,"openRate":29.2,"clickRate":0.0},{"client":"NVR Baltimore/DC","sent":111,"opened":32,"openRate":28.8,"clickRate":11.7},{"client":"Inland Homebuilding Group","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Greenhawk","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Taylor Morrison-Darling Homes - DFW","sent":7,"opened":2,"openRate":28.6,"clickRate":0.0},{"client":"Kennedy Lewis Investment Management","sent":39,"opened":11,"openRate":28.2,"clickRate":0.0},{"client":"Ascent Developer Solutions","sent":144,"opened":40,"openRate":27.8,"clickRate":2.1},{"client":"DR Horton","sent":83,"opened":23,"openRate":27.7,"clickRate":7.2},{"client":"Toorak Capital Partners LLC","sent":29,"opened":8,"openRate":27.6,"clickRate":3.4},{"client":"Perry Homes","sent":64,"opened":17,"openRate":26.6,"clickRate":1.6},{"client":"M/I Homes","sent":4,"opened":1,"openRate":25.0,"clickRate":0.0},{"client":"SR Homes","sent":8,"opened":2,"openRate":25.0,"clickRate":0.0},{"client":"Alliance Bank of Arizona","sent":60,"opened":15,"openRate":25.0,"clickRate":3.3},{"client":"Texas Capital Bank","sent":22,"opened":5,"openRate":22.7,"clickRate":0.0},{"client":"Lowes","sent":31,"opened":7,"openRate":22.6,"clickRate":0.0},{"client":"SiEnergy","sent":18,"opened":4,"openRate":22.2,"clickRate":5.6},{"client":"Toll Brothers","sent":304,"opened":66,"openRate":21.7,"clickRate":8.2},{"client":"Meritage Homes","sent":140,"opened":30,"openRate":21.4,"clickRate":10.0},{"client":"Varde Partners","sent":14,"opened":3,"openRate":21.4,"clickRate":0.0},{"client":"Beach Point Capital","sent":10,"opened":2,"openRate":20.0,"clickRate":0.0},{"client":"Challenger Homes","sent":5,"opened":1,"openRate":20.0,"clickRate":0.0},{"client":"Pacific Communities Builder","sent":16,"opened":3,"openRate":18.8,"clickRate":0.0},{"client":"Walton Global Holdings","sent":79,"opened":14,"openRate":17.7,"clickRate":3.8},{"client":"NVR Florida","sent":54,"opened":9,"openRate":16.7,"clickRate":3.7},{"client":"MUFG Bank","sent":33,"opened":5,"openRate":15.2,"clickRate":0.0},{"client":"Renasant Bank","sent":7,"opened":1,"openRate":14.3,"clickRate":0.0},{"client":"California Bank & Trust","sent":32,"opened":4,"openRate":12.5,"clickRate":3.1},{"client":"Bank of America Merrill Lynch","sent":20,"opened":1,"openRate":5.0,"clickRate":0.0},{"client":"Beazer Homes","sent":140,"opened":4,"openRate":2.9,"clickRate":0.7}]};
+
+
+const months = ['jan','feb','mar','apr','may','jun'];
+const monthLabels = ['January','February','March','April','May','June'];
 const monthAlerts = {
   jan: ['ℹ️ <strong>Note:</strong> January had a tech issue affecting 13 clients who required resends. Data reflects original sends only.'],
   feb: ['⚠️ <strong>Weekley Group (February):</strong> 97.8% click rate on 98.5% open rate is unusually high — verify tracking data.'],
   mar: ['⚠️ <strong>Beazer Homes (March):</strong> 0 opens — ongoing deliverability issue continues.','⚠️ <strong>Weekley Group (March):</strong> 52% click rate — verify tracking data.'],
   apr: ['⚠️ <strong>Beazer Homes (April):</strong> Only 3.6% open rate — deliverability issue continues for third consecutive month.'],
-  may: ['⚠️ <strong>Beazer Homes (May):</strong> 109 out of 140 emails bounced (78% bounce rate) — now four consecutive months. Urgent list cleanup recommended.']
+  may: ['⚠️ <strong>Beazer Homes (May):</strong> 109 out of 140 emails bounced (78% bounce rate) — now four consecutive months. Urgent list cleanup recommended.'],
+  jun: ['⚠️ <strong>Beazer Homes (June):</strong> Only 1 open out of 140 sent (0.7% open rate) — five consecutive months of deliverability issues. Immediate list cleanup required.']
 };
- 
-let currentMonth = 'may';
+
+let currentMonth = 'jun';
 let minSent = 1;
 let topChart, scatterChart, donutChart, trendChart;
- 
+
 function colorForRate(r) {
   if (r > 70) return '#1D9E75';
   if (r >= 50) return '#5DCAA5';
@@ -708,11 +147,11 @@ function colorForRate(r) {
   if (r >= 10) return '#EF9F27';
   return '#E24B4A';
 }
- 
+
 function filtered(month, threshold) {
   return rawData[month].filter(r => r.sent >= threshold);
 }
- 
+
 function computeStats(rows) {
   const totalSent = rows.reduce((s,r) => s+r.sent, 0);
   const totalOpened = rows.reduce((s,r) => s+r.opened, 0);
@@ -728,7 +167,7 @@ function computeStats(rows) {
   ];
   return { totalSent, openRate, clickRate, clients: rows.length, buckets };
 }
- 
+
 function fmtDelta(current, prev, isPercent) {
   if (prev === undefined) return '';
   const diff = parseFloat((current - prev).toFixed(1));
@@ -739,13 +178,13 @@ function fmtDelta(current, prev, isPercent) {
   const arrow = diff > 0 ? '▲' : '▼';
   return '<span class="'+cls+'">'+arrow+' '+sign+diff+suffix+' vs prev month</span>';
 }
- 
+
 function onSlider(val) {
   minSent = parseInt(val);
   document.getElementById('sliderVal').textContent = val == 1 ? 'All clients' : val+'+ sent';
   updateDashboard(currentMonth);
 }
- 
+
 function switchMonth(month) {
   currentMonth = month;
   months.forEach(m => document.getElementById('tab-'+m).classList.toggle('active', m===month));
@@ -755,55 +194,55 @@ function switchMonth(month) {
   trendChart.data.datasets[1].pointRadius = months.map(m => m===month ? 7 : 4);
   trendChart.update();
 }
- 
+
 function updateDashboard(month) {
   const rows = filtered(month, minSent);
   const stats = computeStats(rows);
- 
+
   const prevIdx = months.indexOf(month) - 1;
   let prevStats = undefined;
   if (prevIdx >= 0) {
     prevStats = computeStats(filtered(months[prevIdx], minSent));
   }
- 
+
   // Count for slider
   const total = rawData[month].length;
   document.getElementById('sliderCount').textContent = rows.length + ' of ' + total + ' clients shown';
- 
+
   document.getElementById('m-sent').textContent = stats.totalSent.toLocaleString();
   document.getElementById('m-open').textContent = stats.openRate.toFixed(1) + '%';
   document.getElementById('m-click').textContent = stats.clickRate.toFixed(1) + '%';
   document.getElementById('m-clients').textContent = stats.clients;
- 
+
   document.getElementById('d-sent').innerHTML = prevStats ? fmtDelta(stats.totalSent, prevStats.totalSent, false) : '';
   document.getElementById('d-open').innerHTML = prevStats ? fmtDelta(stats.openRate, prevStats.openRate, true) : '';
   document.getElementById('d-click').innerHTML = prevStats ? fmtDelta(stats.clickRate, prevStats.clickRate, true) : '';
   document.getElementById('d-clients').innerHTML = prevStats ? fmtDelta(stats.clients, prevStats.clients, false) : '';
- 
+
   const bNames = ['Very high (>70%)','High (50–70%)','Average (30–50%)','Low (10–30%)','Very low (<10%)'];
   ['b-vh','b-h','b-avg','b-low','b-vl'].forEach((id,i) => {
     document.getElementById(id).innerHTML = bNames[i]+' — <strong>'+stats.buckets[i]+'</strong> clients';
   });
- 
+
   // Top 30 bar chart
   const sorted = [...rows].sort((a,b) => b.openRate - a.openRate).slice(0,30);
   topChart.data.labels = sorted.map(r => r.client + ' (' + r.sent + ')');
   topChart.data.datasets[0].data = sorted.map(r => r.openRate);
   topChart.data.datasets[0].backgroundColor = sorted.map(r => colorForRate(r.openRate));
   topChart.update();
- 
+
   // Scatter
   scatterChart.data.datasets[0].data = rows.map(r => ({x:r.openRate, y:r.clickRate}));
   scatterChart._rowRef = rows;
   scatterChart.update();
- 
+
   // Donut
   donutChart.data.datasets[0].data = stats.buckets;
   donutChart.update();
- 
+
   // Alerts
   document.getElementById('alert-box').innerHTML = (monthAlerts[month]||[]).map(a => '<div class="alert alert-amber">'+a+'</div>').join('');
- 
+
   // Update trend with filtered data
   trendChart.data.datasets[0].data = months.map(m => {
     const r = filtered(m, minSent);
@@ -817,17 +256,17 @@ function updateDashboard(month) {
   });
   trendChart.update();
 }
- 
+
 window.addEventListener('load', () => {
-  const initRows = filtered('may', 1);
- 
+  const initRows = filtered('jun', 1);
+
   trendChart = new Chart(document.getElementById('trendChart'), {
     type: 'line',
     data: {
       labels: monthLabels,
       datasets: [
-        { label: 'Open rate %', data: months.map(m => parseFloat(computeStats(filtered(m,1)).openRate.toFixed(1))), borderColor: '#378ADD', backgroundColor: '#378ADD22', pointBackgroundColor: '#378ADD', pointRadius: months.map(m=>m==='may'?7:4), tension: 0.3, fill: false },
-        { label: 'Click rate %', data: months.map(m => parseFloat(computeStats(filtered(m,1)).clickRate.toFixed(1))), borderColor: '#1D9E75', backgroundColor: '#1D9E7522', pointBackgroundColor: '#1D9E75', pointRadius: months.map(m=>m==='may'?7:4), tension: 0.3, fill: false }
+        { label: 'Open rate %', data: months.map(m => parseFloat(computeStats(filtered(m,1)).openRate.toFixed(1))), borderColor: '#378ADD', backgroundColor: '#378ADD22', pointBackgroundColor: '#378ADD', pointRadius: months.map(m=>m==='jun'?7:4), tension: 0.3, fill: false },
+        { label: 'Click rate %', data: months.map(m => parseFloat(computeStats(filtered(m,1)).clickRate.toFixed(1))), borderColor: '#1D9E75', backgroundColor: '#1D9E7522', pointBackgroundColor: '#1D9E75', pointRadius: months.map(m=>m==='jun'?7:4), tension: 0.3, fill: false }
       ]
     },
     options: {
@@ -837,7 +276,7 @@ window.addEventListener('load', () => {
       onClick: (e,els) => { if(els.length) switchMonth(months[els[0].index]); }
     }
   });
- 
+
   topChart = new Chart(document.getElementById('topChart'), {
     type: 'bar',
     data: {
@@ -850,7 +289,7 @@ window.addEventListener('load', () => {
       scales: { x: { min:0, max:100, ticks: { callback:v=>v+'%', font:{size:11} }, grid:{color:'rgba(0,0,0,0.06)'} }, y: { ticks: { font:{size:11} } } }
     }
   });
- 
+
   scatterChart = new Chart(document.getElementById('scatterChart'), {
     type: 'scatter',
     data: { datasets: [{ data: initRows.map(r=>({x:r.openRate,y:r.clickRate})), backgroundColor:'#378ADD99', pointRadius:5, pointHoverRadius:8 }] },
@@ -861,7 +300,7 @@ window.addEventListener('load', () => {
     }
   });
   scatterChart._rowRef = initRows;
- 
+
   donutChart = new Chart(document.getElementById('donutChart'), {
     type: 'doughnut',
     data: {
@@ -870,20 +309,9 @@ window.addEventListener('load', () => {
     },
     options: { responsive:true, maintainAspectRatio:false, plugins: { legend: { position:'bottom', labels:{font:{size:12},padding:12,boxWidth:12,boxHeight:12} }, tooltip: { callbacks:{label:ctx=>' '+ctx.label+': '+ctx.raw+' clients'} } } }
   });
- 
-  updateDashboard('may');
+
+  updateDashboard('jun');
 });
 </script>
 </body>
 </html>
- 
-
-
-
-
-
-
-
-
-
-
