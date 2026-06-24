@@ -119,7 +119,7 @@
         <th>Sent</th>
         <th>Open rate</th>
         <th>Click rate</th>
-        <th>CTOR</th>
+        <th>Click-to-open rate</th>
         <th>Report download rate</th>
         <th>Opens</th>
         <th id="th-clicks">Clicks</th>
@@ -129,6 +129,7 @@
     <tbody id="tableBody"></tbody>
   </table>
   <p class="dl-note">* Report download rate = clicks on the portal.jbrec.com report PDF link ÷ total sent. “—” indicates data not available for that report/month.</p>
+  <p class="dl-note">* Click-to-open rate = clicks ÷ opens — of the people who actually opened the email, what share clicked through.</p>
 </div>
 
 <p style="font-size:12px;color:#888780;text-align:center;margin-top:2rem;">JBREC · Data from HubSpot</p>
@@ -729,7 +730,7 @@ function updateMetrics(rows) {
     <div class="detail-item"><span>Total sent</span><strong>${fmtNum(s.sent)}</strong></div>
     <div class="detail-item"><span>Open rate</span><strong>${fmtPct(s.openRate)}</strong></div>
     <div class="detail-item"><span>Click rate</span><strong>${fmtPct(s.clickRate)}</strong></div>
-    <div class="detail-item"><span>CTOR</span><strong>${fmtPct(s.ctor)}</strong></div>
+    <div class="detail-item"><span>Click-to-open rate</span><strong>${fmtPct(s.ctor)}</strong></div>
     <div class="detail-item"><span>Total opens</span><strong>${fmtNum(s.opened)}</strong></div>
     ${clicksItem}
     <div class="detail-item"><span>PDF clicks</span><strong>${fmtNum(s.dlClicks)}</strong></div>
@@ -761,7 +762,7 @@ function updateCharts(rows) {
 
   makeOrUpdateChart('ctorChart', 'ctorChart', {
     type:'bar',
-    data: { labels, datasets:[{ label:'CTOR %', data:sorted.map(r=>r.ctor), backgroundColor:'#7B5EA7', borderWidth:0, borderRadius:4 }] },
+    data: { labels, datasets:[{ label:'Click-to-open rate %', data:sorted.map(r=>r.ctor), backgroundColor:'#7B5EA7', borderWidth:0, borderRadius:4 }] },
     options: { indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{min:0,ticks:{callback:v=>v+'%'},grid:{color:'rgba(0,0,0,0.06)'}}, y:{ticks:{font:{size:11}}}} }
   });
 
